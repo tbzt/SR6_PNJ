@@ -646,7 +646,7 @@ var db = {
       res.skills['Armes à feu'] = rating + 2;
 
       // Qualities
-      res.qualities.positive.push('Adept');
+      res.qualities.positive.push('Adepte');
 
       // Weapon
       res.weapons.push(bonus_weapon);
@@ -857,7 +857,7 @@ var db = {
       res.skills.Sorcellerie = rating + 2;
 
       // Qualities
-      res.qualities.positive.push('Magicien (Hermetique)');
+      res.qualities.positive.push('Magicien');
       if (rating > 3) {
         res.qualities.positive.push('Concentration accrue ' + (rating - 2));
       }
@@ -900,7 +900,7 @@ var db = {
         case 2:
           res.special.spells.push('Détection de la vie');
         case 1:
-          res.special.spells.push('Physical Barrier');
+          res.special.spells.push('Barrière physique');
         default:
           break;
       }
@@ -929,11 +929,11 @@ var db = {
       }
 
       // Skills
-      res.skills.Cracking = rating + 2;
+      res.skills.Piratage = rating + 2;
 
       if (['corpsec', 'htr', 'mob', 'specops'].includes(options.professional_type)) {
         res.skills.Influence = rating;
-        res.skills.Cracking = rating + 1;
+        res.skills.Piratage = rating + 1;
         res.skills.Electronics = rating + 1;
       }
 
@@ -1140,18 +1140,18 @@ var db = {
       res.skills.Furtivité = rating + 2;
 
       switch (options.race) {
-        case 'Human':
+        case 'Humain':
           res.attributes.reaction = 2;
           res.skills['Combat rapproché'] = rating + 1;
           break;
 
-        case 'Elf':
+        case 'Elfe':
           res.attributes.reaction = 2;
           res.skills.Athlétisme = rating + 1;
           res.skills.Influence = rating + 1;
           break;
 
-        case 'Dwarf':
+        case 'Nain':
           res.skills.Biotech = rating + 3;
           res.skills.Athlétisme = rating + 3;
           if (rating < 3) {
@@ -1206,7 +1206,7 @@ var db = {
       }
 
       switch (options.race) {
-        case 'Human':
+        case 'Humain':
           if (rating > 1) {
             augment = this.get_augmentation('Tonification musculaire');
             augment.rating = roll.half(rating);
@@ -1241,7 +1241,7 @@ var db = {
           }
           break;
 
-        case 'Elf':
+        case 'Elfe':
           if (rating > 1) {
             augment = this.get_augmentation('Tonification musculaire');
             augment.rating = roll.half(rating);
@@ -1276,7 +1276,7 @@ var db = {
           }
           break;
 
-        case 'Dwarf':
+        case 'Nain':
           if (rating > 1) {
             augment = this.get_augmentation('Tonification musculaire');
             augment.rating = roll.half(rating);

@@ -231,11 +231,11 @@ var gen = {
     // Will limiting gender to a binary decision piss off some people? Probably yes.
     // However, the author is not spending time developing a fully politically correct gender-determination system at this time.
     // If you really want to hear how the author feels about the situation, buy him a beer
-    if (options.gender !== 'Male' && options.gender !== 'Female') {
+    if (options.gender !== '♂' && options.gender !== '♂') {
       if (options.is_contact) {
         // Even split
         if (roll.dval(2) === 2) {
-          mook.gender = '♀';
+          mook.gender = '♂';
         }
         else {
           mook.gender = '♂';
@@ -244,7 +244,7 @@ var gen = {
       else {
         // Probably not so even
         if (roll.dval(10) >= 9) {
-          mook.gender = '♀';
+          mook.gender = '♂';
         }
         else {
           mook.gender = '♂';

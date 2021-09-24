@@ -249,7 +249,7 @@ var render = {
 
         // Need to skip some special qualities: 'Adept' and 'Magician (Hermetic)'
         // If either one is present, they can't be edited or deleted
-        var skip_qualities = ['Adept', 'Magician (Hermetic)', 'Magician (Shaman)'];
+        var skip_qualities = ['Adept', 'Magician'];
         if (skip_qualities.includes(quality))
           $quality.find('button').detach();
       });
@@ -662,23 +662,23 @@ var render = {
 
     // Fill in the name and description
     if (data.edited) {
-      $mook.find('.npc_name').html(data.name + ' -- ' + data.gender + ' ' + data.race);
+      $mook.find('.npc_name').html(data.name + ' -- ' + data.race + ' ' + data.gender + ',  ' + data.professional_description + ' - Professionalisme ' + data.professional_rating);
 
       $mook.find('.npc_description').hide();
     }
     else {
       $mook.find('.npc_name').html(data.name);
 
-      var description = data.gender + ' ' + data.race + ', Professionalisme ' + data.professional_rating + ' ' + data.professional_description;
+      var description = data.name + ' -- ' + data.race + ' ' + data.gender + ',  ' + data.professional_description + ' - Professionalisme ' + data.professional_rating;
 
       if (data.special.is_lt)
-        description += ' Lieutenant';
+        description += ', Lieutenant';
       if (data.special.is_decker)
-        description += ' Decker';
+        description += ', Decker';
       if (data.special.is_adept)
-        description += ' Physical Adept';
+        description += ', Adepte';
       if (data.special.is_mage)
-        description += ' Magician';
+        description += ', Magicien';
 
       $mook.find('.npc_description').html(description);
     }
@@ -1336,10 +1336,12 @@ var render = {
     }
 
     // Mage spells
-    if (data.special.is_mage === true) {
+    if (data.special.is_mage === true)
+    {
       $mook.find('.information .spells .value').html(data.special.spells.join(', '));
     }
-    else {
+    else
+    {
       $mook.find('.information .spells').hide();
     }
 
@@ -1372,14 +1374,14 @@ var render = {
 
     // Fill in the name and description
     if (data.edited) {
-      $mook.find('.npc_name').html(data.name + ' -- ' + data.gender + ' ' + data.race);
+      $mook.find('.npc_name').html(data.name + ' -- ' + data.race + ' ' + data.gender + ',  ' + data.professional_description + ' - Professionalisme ' + data.professional_rating);
 
       $mook.find('.npc_description').hide();
     }
     else {
       $mook.find('.npc_name').html(data.name);
 
-      var description = data.race + ' ' + data.gender + ',  ' + data.professional_description + ' - Professionalisme ' + data.professional_rating ;
+      var description = data.race + ' ' + data.gender + ',  ' + data.professional_description + ' - Professionalisme ' + data.professional_rating;
 
       if (data.special.is_lt)
         description += ' - Lieutenant';
@@ -1426,7 +1428,7 @@ var render = {
     }
 
     // Set/Hide Magic
-    if (data.special.hasOwnProperty('Magie')) {
+    if (data.special.hasOwnProperty('Magic')) {
       $mook.find('.attribute_values .attribute_value.magic').html(data.special.Magic);
     }
     else {
@@ -1847,10 +1849,12 @@ var render = {
     }
 
     // Mage spells
-    if (data.special.is_mage === true) {
+    if (data.special.is_mage === true)
+    {
       $mook.find('.information .spells .value').html(data.special.spells.join(', '));
     }
-    else {
+    else
+    {
       $mook.find('.information .spells').hide();
     }
 
