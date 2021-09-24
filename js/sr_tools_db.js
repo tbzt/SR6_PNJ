@@ -604,7 +604,7 @@ var db = {
       }
     }
 
-    if (special_type === 'Adepte') {
+    if (special_type === 'Adept') {
       // What kind of adept?
       var improved_skill = 'Armes à feu', bonus_weapon;
 
@@ -744,9 +744,10 @@ var db = {
               name: 'Improved Physical Attribute',
               type: 'attribute',
               rating: 1,
-              attribute: 'Agility'
+              attribute: 'Agilité'
             }
           );
+          res.attributes.agility = +2;
           break;
 
         case 2:
@@ -763,9 +764,10 @@ var db = {
             {
               name: 'Improved Physical Attribute',
               rating: 2,
-              attribute: 'Agility'
+              attribute: 'Agilité'
             }
           );
+          res.attributes.agility = +2;
           break;
 
         case 3:
@@ -782,9 +784,10 @@ var db = {
             {
               name: 'Improved Physical Attribute',
               rating: 2,
-              attribute: 'Agility'
+              attribute: 'Agilité'
             }
           );
+          res.attributes.agility = +2;
           break;
 
         case 4:
@@ -801,9 +804,10 @@ var db = {
             {
               name: 'Improved Physical Attribute',
               rating: 2,
-              attribute: 'Agility'
+              attribute: 'Agilité'
             }
           );
+          res.attributes.agility = +2;
           break;
 
         case 5:
@@ -820,9 +824,10 @@ var db = {
             {
               name: 'Improved Physical Attribute',
               rating: 3,
-              attribute: 'Agility'
+              attribute: 'Agilité'
             }
           );
+          res.attributes.agility = +3;
           break;
 
         case 6:
@@ -839,9 +844,10 @@ var db = {
             {
               name: 'Improved Physical Attribute',
               rating: 3,
-              attribute: 'Agility'
+              attribute: 'Agilité'
             }
           );
+          res.attributes.agility = +3;
           break;
       }
     }

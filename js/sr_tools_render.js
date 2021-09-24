@@ -249,7 +249,7 @@ var render = {
 
         // Need to skip some special qualities: 'Adept' and 'Magician (Hermetic)'
         // If either one is present, they can't be edited or deleted
-        var skip_qualities = ['Adept', 'Magician'];
+        var skip_qualities = ['Adepte', 'Mage'];
         if (skip_qualities.includes(quality))
           $quality.find('button').detach();
       });
