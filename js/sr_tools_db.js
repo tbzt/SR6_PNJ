@@ -2227,7 +2227,6 @@ var db = {
       ammo_count: 0,
       reload: 'c', // Clip, Internal Magazine, etc.
       ammo_type: '', // Assume normal ammo unless specified
-      reach: 0
     };
 
     var stock_weapon = this._weapon_list.find(function (i) {

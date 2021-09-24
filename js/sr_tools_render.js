@@ -1049,13 +1049,6 @@ var render = {
       if (entry.hasOwnProperty('force'))
         entry_text.push('Puissance ' + entry.force);
 
-      // if (entry.acc_modified !== null)
-      // 	entry_text.push('Acc ' + entry.acc + ' (' + entry.acc_modified + ')');
-      // else
-      // 	entry_text.push('Acc ' + entry.acc);
-
-      entry_text.push('Allonge ' + entry.reach);
-
       if (entry.damage_attribute === 'strength')
         entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
       else
@@ -1116,8 +1109,6 @@ var render = {
       entry = db.get_weapon('Lames d\'avant-bras');
 
       entry_text = [entry.ability];
-
-      entry_text.push('Allonge ' + entry.reach);
 
       if (entry.damage_attribute === 'strength')
         entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
@@ -1680,8 +1671,6 @@ var render = {
       // else
       // 	entry_text.push('Acc ' + entry.acc);
 
-      entry_text.push('Allonge ' + entry.reach);
-
       if (entry.damage_attribute === 'strength')
         entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
       else
@@ -1705,9 +1694,7 @@ var render = {
       entry = db.get_weapon('Lames d\'avant-bras');
 
       entry_text = [entry.ability];
-
-      entry_text.push('Allonge ' + entry.reach);
-
+      
       // if (entry.damage_attribute === 'strength')
       // 	entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
       // else
