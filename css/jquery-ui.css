@@ -932,7 +932,7 @@ html .ui-button.ui-state-disabled:active {
 	border: 1px solid #333333;
 	background: #0a0a0a url("images/ui-bg_diagonals-small_40_0a0a0a_40x40.png") 50% 50% repeat;
 	font-weight: bold;
-	color: #75abff;
+	color: #a3008f;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -941,7 +941,7 @@ a.ui-button,
 a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
-	color: #75abff;
+	color: #a3008f;
 	text-decoration: none;
 }
 .ui-state-hover,
