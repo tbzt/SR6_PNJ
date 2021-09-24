@@ -961,7 +961,7 @@ var render = {
     var defense_test = augmented_attributes.reaction + augmented_attributes.intuition;
     $mook.find('.information .defense_test .value').html(defense_test);
     $mook.find('.information .defense_test button').button().click(function () {
-      var d = dodge_roll;
+      var d = defense_test;
 
       if (wp.penalty !== 0)
         d += wp.penalty;
@@ -1379,16 +1379,16 @@ var render = {
     else {
       $mook.find('.npc_name').html(data.name);
 
-      var description = data.gender + ' ' + data.race + ', Professionalisme ' + data.professional_rating + ' ' + data.professional_description;
+      var description = data.race + ' ' + data.gender + ',  ' + data.professional_description + ' - Professionalisme ' + data.professional_rating ;
 
       if (data.special.is_lt)
-        description += ' Lieutenant';
+        description += ' - Lieutenant';
       if (data.special.is_decker)
-        description += ' Decker';
+        description += ' - Decker';
       if (data.special.is_adept)
-        description += ' Adepte';
+        description += ' - Adepte';
       if (data.special.is_mage)
-        description += ' Magicien';
+        description += ' - Magicien';
 
       $mook.find('.npc_description').html(description);
     }
@@ -1694,7 +1694,7 @@ var render = {
       entry = db.get_weapon('Lames d\'avant-bras');
 
       entry_text = [entry.ability];
-      
+
       // if (entry.damage_attribute === 'strength')
       // 	entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
       // else
@@ -1812,9 +1812,9 @@ var render = {
         commlink = 'Transys Avalon';
     }
 
-    commlink += ' commlink (indice ' + data.commlink + ')';
+    commlink += ' (indice ' + data.commlink + ')';
 
-    commlink = '<div>' + commlink + '</div>';
+    commlink = '<div> Commlink : ' + commlink + '</div>';
 
     gear.push(commlink);
 

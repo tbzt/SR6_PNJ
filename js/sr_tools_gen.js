@@ -235,19 +235,19 @@ var gen = {
       if (options.is_contact) {
         // Even split
         if (roll.dval(2) === 2) {
-          mook.gender = 'Femme';
+          mook.gender = '♀';
         }
         else {
-          mook.gender = 'Homme';
+          mook.gender = '♂';
         }
       }
       else {
         // Probably not so even
         if (roll.dval(10) >= 9) {
-          mook.gender = 'Femme';
+          mook.gender = '♀';
         }
         else {
-          mook.gender = 'Homme';
+          mook.gender = '♂';
         }
       }
     }
