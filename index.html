@@ -95,7 +95,7 @@
 	</div>
 
 	<div class="menu">
-		<button class="cast">Casting</button>
+		<button class="cast">Ombres portées</button>
 		<button class="minion">Générateur de PNJ</button>
 		<button class="contact">Générateur de contact</button>
 		<button class="run">Générateur de run</button>
@@ -106,79 +106,28 @@
 	<div class="main_content"></div>
 
 	<div template_holder>
-		<div template="main_screen" class="intro_screen">
-			<div>Welcome to my Shadowrun GM Mob Master!</div>
-
-			<p>The GM Mob Master was created as a set of tools for Shadowrun game masters. It started as a way of generating
-				extra NPCs for combat-heavy runs, and as a thought exercise in how to expand the list of grunts in the Core
-				Rulebook to more situations. The intent was to include generators and lists that would make it easier for game
-				masters to get mechanics out of the way and spend more time telling stories. My hope was that this will
-				eventually make it easy for game masters to generate an entire session of entertainment with the click of a few
-				buttons.</p>
-
-			<p>It is divided into several sections, all of which can be accessed by the buttons on the left. There is also a
-				dice-simulator at the top to let you quickly simulate a fist-full of dice. Remember, as a GM you don't have to
-				be honest with how many successes or failures you "rolled"...</p>
-
+	<div template="main_screen" class="intro_screen">
+		<div>Bienvenue sur le Mob Master de Shadowrun 6e édition !</div> 
+		<p>Le GM Mob Master a été créé par <a href=https://github.com/toktic/sr_gmt>Toktic</a> comme un ensemble d'outils pour les meneurs de Shadowrun.</p> 
+		<p>Il est divisé en plusieurs sections, toutes accessibles par les onglets à gauche. Il y a également un simulateur de dés en haut pour vous permettre de simuler rapidement un poignée de dés.</p> 
+		<ul> 
+			<li>La première section est <b>Ombres portées</b>. Elle contient l'assortiment complet des PNJs que vous créez et sauvegardez pour les utiliser plus tard. Ce casting répertorie tous les figurants sauvegardés. Vous pouvez créer plein de groupes personnalisés et ne lister que les figurants dont vous avez besoin pour une scène.</li> 
+			<li>Vient ensuite le <b>Générateur de PNJ</b>. Vous pouvez l'utiliser pour créer un seul PNJ ou une bande. Sachez simplement que si vous en créez un et que vous ne le sauvegardez pas dans les <b>Ombres portées</b>, il disparaîtra et sera perdu (à jamais).</li> 
+			<li><b>Paramètres</b> propose une sélection de, vous l'avez deviné, paramètres que vous pouvez modifier. Il y a également un bouton <b>Atomiser</b> si vous voulez supprimer toutes les informations enregistrées et recommencer à zéro.</li> 
+		</ul> 
+		<p>Ce code a également servi d'exutoire créatif à Toktic pour la programmation pour son propre plaisir. Mais si vous le trouvez par hasard à une convention et que vous voulez le remercier, vous pouvez lui payer une bière à la GenCon.</p> 
+		<p>Ce code a été traduit en français par Michel_Platinium. Pareil pour la bière, moins la GenCon.</p>
+		<p><b>Sur la conservation des données :</b> le site utilise une fonctionnalité web, appelée Local Storage, qui agit un peu comme des cookies. Les données sont stockées dans le cache de votre navigateur. Les données ne sont pas partagées avec d'autres utilisateurs de votre ordinateur, ni même avec d'autres navigateurs, ni au créateur et ni à Michel_Platinium. Donc, si vous prenez le temps de créer et de sauvegarder des PNJs, assurez-vous de le créer sur l'ordinateur que vous apportez à la session de jeu. Ou imprimez-les, ça marche aussi !</p> 
+		<p>Amusez-vous bien avec cet outil ! Il est destiné à être utilisé et destiné à rendre votre vie plus facile en tant que MJ.</p> 
+		<div class="legalese">La Topps Company, Inc. a la propriété exclusive des noms, du logo, des œuvres d'art, des marques, des photographies, des sons, de l'audio, de la vidéo et/ou de tout matriel propriétaire utilisé en relation avec le jeu Shadowrun.<br />Le contenu original de GM Mob Master est sous licence Creative Commons Attribution-NonCommercial 4.0 International. Donc, si vous utilisez quoi que ce soit ici, veuillez donner le crédit où il est dû.<br />GM Mob Master est fourni "tel quel" et aucune garantie n'est fournie ou déduite. En aucun cas, le détenteur du droit d'auteur ou les contributeurs ne sont responsables des dommages quelle que soit la manière dont ils sont causés.</div> 
+		<div class="build_mismatch_nuke_storage"> <p>La version du logiciel que vous exécutez ne correspond pas à la version des données stockées, ce qui causera des problèmes. Voulez-vous supprimer les données stockées locales et repartir de zéro ? </p> <p>Alternativement, regardez la version des données stockées et saisissez plutôt cette version du code.</p>
 			<ul>
-				<li>The first section is <b>Cast of Shadows</b>. This holds the full assortment of npcs that you create and save
-					for use later. The "Full Cast" lists all saved cast members. You can create plenty of custom tabs and list
-					only the cast members you need for a scene on that tab.</li>
-				<li>Next up is the <b>NPC Generator</b>. You can use the tabs within to create a single NPC or a horde of them.
-					Just be aware that if you create one and don't save them to the <b>Cast of Shadows</b>, they will disappear
-					and be lost.</li>
-				<li><b>Settings</b> has a selection of, you guessed it, Settings that you can change. This also has a Nuke
-					button if you want to delete all of your saved information and start over from scratch.</li>
+				<li software_version>a</li>
+				<li stored_version>b</li>
+				<li link>c</li>
 			</ul>
-
-			<p>This has also served as a creative outlet for programming for my own enjoyment. I have spent quite a few hours
-				on this utility in the name of fun. There was never any intention of turning this into a money-generating
-				enterprise. I don't want to deal with the legal or infrastructure headaches. Though if you happen to find me at
-				a convention and want to say thanks, you can buy me a beer at GenCon. If you want to complain or sue me, I don't
-				exist and don't attend GenCon. :D</p>
-
-			<p>On data-retention: I use a piece of web programming functionality called Local Storage that act a little bit
-				like cookies. The data is stored in your browser's cache for you for that browser. I have to specify both of
-				those because it's not shared to other users on your computer, nor even other browsers. It certainly isn't
-				shared to other computers, and I don't have access to it at all. So if you spend the time to create and save a
-				cast of shadow denizens, make sure you create it on the computer you're bringing to the game session. Or print
-				them out, that works too!</p>
-
-			<p>As with many side projects, there is a whole list of things I want to add to this utility. There are plenty of
-				features that I haven't had the time to add yet. Since I'm not getting paid to work on this, it only happens
-				when I do have spare time that isn't being spent on other things. And there will eventually come a time that I
-				wash my hands of this and let it sit on a shelf to die from neglect. It may not be a nice thing to say, but it's
-				the truth. This utility isn't meant to be a replacement for the Shadowrun books, either. I make an assumption
-				that users are familiar with the basics of Shadowrun, from what an Adept is to what constitutes a Mr. Johnson,
-				and are able to look things up as needed, like specific equipment information. It is meant as a supplement and
-				assistant, much like how HeroLab and Chummer make PC creation easier for runners. I will not try to make this
-				fully comprehensive and cover every possible option. There are too many source books to keep up with and this
-				isn't meant to be a replacement for sourcebooks.</p>
-
-			<p>Have fun with this tool! It is meant to be used and intended to make your life easier as a GM. Speaking of
-				which, always try to offer your players the chance to make a deal with a dragon.</p>
-
-			<div class="legalese">The Topps Company, Inc. has sole ownership of the names, logo, artwork, marks, photographs,
-				sounds, audio, video and/or any proprietary matrial used in connection with the game Shadowrun.<br />The Topps
-				Company, Inc. has granted permission to GM Mob Master to use such names, logos, artwork, marks and/or any
-				proprietary materials for promotional and informational purposes on its website but does not endorse, and is not
-				affiliated with this utility in any official capacity whatsoever.<br />Original content within GM Mob Master is
-				licensed under the Creative Commons Attribution-NonCommercial 4.0 International. So if you use anything here,
-				please give credit where it is due.<br />GM Mob Master is provided "as is" and no warranties or guarantees are
-				provided or inferred. In no event shall the copyright holder or contributors be liable for damage however they
-				are caused. Don't be a jerk!</div>
-
-			<div class="build_mismatch_nuke_storage">
-				<p>The software version you are running does not match the stored data's version which will cause issues. Do you
-					want to delete the local stored data and start from scratch?</p>
-				<p>Alternately, look at the stored data version and grab that version of code instead.</p>
-				<ul>
-					<li software_version>a</li>
-					<li stored_version>b</li>
-					<li link>c</li>
-				</ul>
-			</div>
 		</div>
+	</div>
 
 		<div template="cast_of_shadows">
 			<div class="cast_of_shadows">
@@ -192,7 +141,7 @@
 
 					<div class="edit_tabs">
 						<div class="add_tab_wrapper">
-							<span>Ajouter un onglet :</span>
+							<span>Ajouter un groupe :</span>
 							<input id="add_tab_name" />
 							<button class="add_tab smaller_button"><span class="ui-icon ui-icon-circle-plus"></span></button>
 						</div>
@@ -200,7 +149,7 @@
 						<div class="spacer_20"></div>
 
 						<div class="edit_tab_wrapper">
-							<span>Modifier les onglets :</span>
+							<span>Modifier les groupes :</span>
 						</div>
 					</div>
 				</div>
@@ -219,23 +168,17 @@
 		<div template="faq">
 			<h2>FAQ</h2>
 
-			<h3>Frequently Asked Questions &amp; Functionally Annoying Quirks</h3>
-
 			<div>
-				This is a listing of questions that have been asked or other points of knowledge that are likely relevant to new
-				users.
-				This is also a collection of quirks and annoyances that have cropped up as part of turning a rulebook into an
-				application.
+				C'est une liste de questions qui ont été posées ou d'autres points de connaissance qui sont probablement pertinents pour les nouveaux utilisateurs.
 			</div>
 
 			<ul>
-				<li>NPC stats: The attributes for all NPCs follow a curve the higher up the professional rating goes.</li>
-				<li>Cyberlimbs: All cyberlimbs (arms &amp; legs) are assumed to have the same Strength and Agility scores as the
-					NPC. So there is no additional averaging of attributes or other nonsense.</li>
+				<li>Stats des PNJ : les attributs des PNJ suivent la courbe du Professionnalisme.</li>
+				<li>Cybermembres : Tous les cybermembres (bras et jambes) sont supposés avoir les mêmes scores de Force et d'Agilité que le PNJ. Il n'y a donc pas de moyenne supplémentaire d'attributs ou d'autres bêtises.</li>
 			</ul>
 
 			<div>
-				Want to see the project? Head over to <a href="https://github.com/toktic/sr6_gmt">https://github.com/toktic/sr6_gmt</a>.
+				Vous voulez voir/aider le projet original ? Allez sur <a href="https://github.com/toktic/sr6_gmt">https://github.com/toktic/sr6_gmt</a>.
 			</div>
 		</div>
 
@@ -243,13 +186,14 @@
 			<h2>Paramètres</h2>
 			<div class="row">
 				<div class="description">Cela va supprimer tous les paramètres, les PNJ, tout. C'est la grenade dans le magasin de porcelaine. Tout sera perdu, rien ne sera sauvé.</div>
-				<button id="delete_localstorage">Atomiser depuis l'orbite</button>
+				<br>
+				<button id="delete_localstorage">Atomiser</button>
 			</div>
 
 			<div class="row">
-				<h3>Moniteur de condition des figurants</h3> 
-				<p>Les figurants, par défaut, ont un moniteur de condition combiné basé sur leurs scores CON et VOL. Si vous voulez que vos figurants aient des pistes de santé séparées pour les dégâts d'étourdissement et les dégâts physiques, faites cette modification ici.</p> 
-				<p>Les modifications ici se répercuteront sur tous les figurants créés après ce point.  Tous les figurants déjà existants devront être édités individuellement.</p>
+				<h3>Moniteur de condition des PNJs</h3> 
+				<p>Les PNJ, par défaut, ont un moniteur de condition combiné basé sur leurs scores CON et VOL. Si vous voulez que vos PNJ aient par défaut des moniteurs séparées pour les dégâts d'étourdissement et les dégâts physiques, c'est ici.</p> 
+				<p>Les modifications ici se répercuteront sur tous les PNJ créés après ce point.  Tous les PNJ déjà existants devront être édités individuellement.</p>
 				<div setting="condition_monitor">
 					<input type="radio" id="combined" name="condition_monitor"><label for="combined">Combined</label>
 					<input type="radio" id="separate" name="condition_monitor"><label for="separate">Separate</label>
@@ -257,9 +201,9 @@
 			</div>
 
 			<div class="row">
-				<h3>Pénalités de blessure des figurants</h3> 
-				<p>Les figurants subissent normalement une pénalité de -1D par 3 cases sur leur moniteur de condition. Cela peut être changé en toutes les 2 cases, toutes les cases, ou même ignorer les pénalités de blessures.</p> 
-				<p>Les changements ici se refléteront sur tous les figurants créés après. Tous les figurants déjà existants devront être édités individuellement.</p>
+				<h3>Malus de blessure des PNJ</h3> 
+				<p>Les PNJ subissent normalement un malus de -1D par 3 cases sur leur moniteur de condition. Cela peut être changé en toutes les 2 cases, toutes les cases, ou même ignorer les pénalités de blessures.</p> 
+				<p>Les changements ici se refléteront sur tous les PNJ créés après. Tous les PNJ déjà existants devront être édités individuellement.</p>
 				<div setting="wound_penalty">
 					<input type="radio" id="3" name="wound_penalty"><label for="3">-1 pour 3 cases</label>
 					<input type="radio" id="2" name="wound_penalty"><label for="2">-1 pour 2 cases</label>
@@ -269,7 +213,7 @@
 			</div>
 
 			<div class="delete_localstorage_dialog">
-				<p>Cette option ne peut pas être annulée. Une fois que vous aurez tout supprimé ici, vous devrez tout recommencer. En revanche, cette option est idéale si vous voulez vous assurer qu'aucun decker ne trouve de traces de vos activités ici.</p>
+				<p>Cette option ne peut pas être annulée. Une fois que vous aurez tout supprimé ici, vous devrez tout recommencer. En revanche, cette option est idéale si vous voulez vous assurer qu'aucun decker ne trouve de traces de vos activités dans votre navigateur.</p>
 			</div>
 		</div>
 
@@ -281,12 +225,13 @@
 					<li><a href="#mob_generator">Générateur de groupe de PNJ</a></li>
 				</ul>
 				<div id="overview">
-					<div class="intro">Le générateur de PNJ est le concept qui a donné le coup d'envoi de la création de ces outils. Ici, vous pouvez facilement créer une bande de voyous pour harceler le groupe ou une équipe surpuissante pour les débusquer d'un bâtiment corpo.</div>
+					<div class="intro">Ici, vous pouvez facilement créer une bande de voyous pour harceler le groupe ou une équipe surpuissante pour les débusquer d'un bâtiment corpo.</div>
 					<div class="intro">Lors de la génération d'un seul PNJ, il y a plusieurs catégories et options générales parmi lesquelles vous pouvez choisir ou laisser tout au hasard. Une fois le PNJ créé, vous pouvez les enregistrer dans la section <b>Casting</b>. Ils peuvent également être modifiés à la fois immédiatement ou plus tard. Cependant, ils ne sont pas sauvegardés tant qu'ils n'ont pas été ajoutés au <b>Casting</b>.</div>
 					<div class="intro">La génération d'un groupe de PNJ fonctionne de la même manière, en définissant seulement les grandes lignes ici et en vous laissant affiner individuellement les PNJ plus tard.</div>
 					<div class="intro">La génération d'un des <i>Types spéciaux</i> ne se produit que si vous choisissez l'option correspondante.
 					</div>
-					<div class="intro">TCes PNJ utilisent les exemples du livre des règles comme lignes directrices. Ils ne sont pas censés être parfaits ni même optimaux. Les attributs et les rangs de compétence sont une approximation de ce que Toktic a considéré comme raisonnablement bon pour une profession et un niveau de puissance donnés. N'hésitez pas à ajouter votre grain de sel.</div>
+					<div class="intro">Ces PNJ utilisent les exemples du livre des règles comme lignes directrices. Ils ne sont pas censés être parfaits ni même optimaux. Les attributs et les rangs de compétence sont une approximation de ce que Toktic a considéré comme raisonnablement bon pour une profession et un niveau de puissance donnés. N'hésitez pas à ajouter votre grain de sel.</div>
+					<br>
 					<button class="generate_mook">Générer un PNJ</button>
 					<button class="generate_mob">Générer un groupe de PNJ</button>
 				</div>
@@ -294,7 +239,7 @@
 					<div class="entry_form">
 						<div class="input_row">
 							<label equalize>Nom</label>
-							<input name="name" placeholder="Random NPC" />
+							<input name="name" placeholder="PNJ aléatoire" />
 						</div>
 
 						<div class="input_row">
@@ -365,18 +310,18 @@
 
 						<div id="generated_results"></div>
 
-						<button id="discard_minion">Rejeter</button>
+						<button id="discard_minion">Virer</button>
 
-						<button id="add_to_cast">Ajouter au casting</button>
+						<button id="add_to_cast">Ajouter aux ombres</button>
 
-						<button id="add_dialog">Ajouter à un onglet spécifique</button>
+						<button id="add_dialog">Ajouter à un groupe spécifique</button>
 					</div>
 				</div>
 				<div id="mob_generator">
 					<div class="entry_form">
 						<div class="input_row">
-							<label equalize>Nom du mob</label>
-							<input name="name" placeholder="Random Mob" />
+							<label equalize>Nom du PNJ</label>
+							<input name="name" placeholder="PNJ aléatoire" />
 						</div>
 
 						<div class="input_row">
@@ -461,11 +406,11 @@
 
 						<div id="generated_results"></div>
 
-						<button id="discard_minion">Tous les rejeter</button>
+						<button id="discard_minion">Tous les virer</button>
 
 						<button id="add_to_cast">Tous les ajouter</button>
 
-						<button id="add_dialog">Tous les ajouter à un onglet</button>
+						<button id="add_dialog">Tous les ajouter à un groupe</button>
 					</div>
 				</div>
 			</div>
@@ -525,7 +470,7 @@
 				</div>
 
 				<div class="defense_rating">
-					<label>Score de défense</label>
+					<label>Score de défense (SD)</label>
 					<div class="value"></div>
 				</div>
 
@@ -926,8 +871,8 @@
 		</div>
 
 		<div template="cast__full_list" class="cast__full_list">
-			<div class="empty_message">Aucun de vos figurants n'est enregistré dans votre Casting. Rien à voir ici, circulez.</div>
-			<div class="cast_message">Voici la liste complète des figurants que vous avez ajouté à votre Casting.</div>
+			<div class="empty_message">Aucun de vos PNJ n'est enregistré dans vos ombres. Rien à voir ici, circulez.</div>
+			<div class="cast_message">Voici la liste complète des PNJ que vous avez ajouté.</div>
 			<div list></div>
 		</div>
 
@@ -940,18 +885,18 @@
 				<div class="edited_date"></div>
 				<div class="add_to_tab">
 					<div>
-						<span>Ajouter un PNJ aux onglets :</span>
+						<span>Ajouter un PNJ aux groupes :</span>
 						<select name="tab_name"></select>
 					</div>
 					<button class="add_npc"><span title="Just Add">Ajouter un PNJ</span></button>
-					<button class="add_npc_and_switch"><span title="Add &amp; Switch">Ajouter &amp; changer d'onglet</span></button>
+					<button class="add_npc_and_switch"><span title="Add &amp; Switch">Ajouter &amp; changer de groupe</span></button>
 				</div>
 
-				<div class="clone_dialog">Voulez-vous cloner ce PNJ ? Cela va générer un nouveau clone sans l'ajouter à aucun onglet de casting.</div>
-				<div class="delete_dialog">Êtes-vous sûr de vouloir supprimer ce personnage ? Le supprimer ici le supprimera également de tous les autres onglets. C'est la mort permanente.</div>
-				<div class="tab_clone_dialog">Voulez-vous cloner ce PNJ ? Cela ajoutera le clone à tous les mêmes onglets.
+				<div class="clone_dialog">Voulez-vous cloner ce PNJ ? Cela va générer un nouveau clone sans l'ajouter à aucun groupe.</div>
+				<div class="delete_dialog">Êtes-vous sûr de vouloir supprimer ce personnage ? Le supprimer ici le supprimera également de tous les autres groupes. C'est la mort permanente.</div>
+				<div class="tab_clone_dialog">Voulez-vous cloner ce PNJ ? Cela ajoutera le clone à tous les mêmes groupes.
 				</div>
-				<div class="tab_delete_dialog">Êtes-vous sûr de vouloir supprimer ce personnage ? Cela ne supprime que le PNJ de l'onglet actuel.</div>
+				<div class="tab_delete_dialog">Êtes-vous sûr de vouloir supprimer ce personnage ? Cela ne supprime le PNJ que du groupe actuel.</div>
 			</div>
 		</div>
 
@@ -964,7 +909,7 @@
 			<div class="tools">
 				<button class="clone_cast_member"><span title="Clone" class="ui-icon ui-icon-copy"></span></button>
 				<button class="delete_cast_member"><span title="Delete" class="ui-icon ui-icon-circle-close"></span></button>
-				<div class="dialog">Supprimer ce personnage de cet onglet ? Ce personnage peut toujours être trouvé dans le casting complet.
+				<div class="dialog">Supprimer ce personnage de ce groupe ? Ce personnage peut toujours être trouvé dans les ombres portées.
 				</div>
 				<div class="created_date"></div>
 				<div class="edited_date"></div>
@@ -973,7 +918,7 @@
 
 		<div template="add_dialog_single" class="add_dialog_single">
 			<div class="existing_tab_wrapper">
-				<div>Ajoutez ce PNJ à l'un des onglets existants.</div>
+				<div>Ajoutez ce PNJ à l'un des groupes existants.</div>
 				<div><select name="existing"></select></div>
 				<div class="spacer_5"></div>
 				<button existing>Ajouter</button>
@@ -981,7 +926,7 @@
 				<div class="spacer_20"></div>
 			</div>
 			<div class="new_tab_wrapper">
-				<div>Ajouter ce PNJ à un nouvel onglet.</div>
+				<div>Ajouter ce PNJ à un nouveau groupe.</div>
 				<div><input new_tab /></div>
 				<div class="spacer_5"></div>
 				<button new_tab>Créer &amp; Ajouter</button>
@@ -990,7 +935,7 @@
 
 		<div template="add_dialog_mob" class="add_dialog_mob">
 			<div class="existing_tab_wrapper">
-				<div>Ajoutez ces PNJ à l'un des onglets existants.</div>
+				<div>Ajoutez ces PNJ à l'un des groupes existants.</div>
 				<div><select name="existing"></select></div>
 				<div class="spacer_5"></div>
 				<button existing>Ajouter</button>
@@ -998,7 +943,7 @@
 				<div class="spacer_20"></div>
 			</div>
 			<div class="new_tab_wrapper">
-				<div>Ajoutez ces PNJ à un nouvel onglet.</div>
+				<div>Ajoutez ces PNJ à un nouveau groupe.</div>
 				<div><input new_tab /></div>
 				<div class="spacer_5"></div>
 				<button new_tab>Créer &amp; Ajouter</button>

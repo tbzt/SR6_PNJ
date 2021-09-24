@@ -1898,7 +1898,6 @@ var db = {
       dv: 4,
       damage_attribute: 'strength',
       ap: -3,
-      reach: 1
     },
 
     {
@@ -1909,7 +1908,6 @@ var db = {
       dv: 3,
       damage_attribute: 'strength',
       ap: -2,
-      reach: 1
     },
 
     {
@@ -1929,7 +1927,6 @@ var db = {
       ar: '6/-/-/-/-',
       dv: 3,
       damage_attribute: 'strength',
-      reach: 1
     },
 
     {
@@ -1940,7 +1937,6 @@ var db = {
       dv: 5,
       damage_type: 'E(e)',
       ap: -5,
-      reach: 1
     },
 
     {
@@ -1950,7 +1946,6 @@ var db = {
       ar: '8/-/-/-/-',
       dv: 4,
       damage_attribute: 'strength',
-      reach: 2
     },
 
     {
@@ -1960,7 +1955,6 @@ var db = {
       ar: '8/-/-/-/-',
       dv: 4,
       damage_attribute: 'strength',
-      reach: 2
     },
 
     {
