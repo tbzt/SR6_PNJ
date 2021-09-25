@@ -168,6 +168,9 @@ var gen = {
       else if (options.include_mage) {
         this_special.is_mage = true;
       }
+      else if (options.include_shaman) {
+        this_special.is_shaman = true;
+      }
 
       mob.push(this.mook(this_special));
     }
@@ -358,7 +361,7 @@ var gen = {
     if (options.is_shaman) {
       adjustments = db.get_special_adjustments('Shaman', options);
       this._merge_adjustments(mook, adjustments);
-      mook.special.is_tank = true;
+      mook.special.is_shaman = true;
     }
 
     if (options.is_tank) {

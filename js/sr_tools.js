@@ -403,6 +403,7 @@ function view_generator() {
           case 'is_decker':
           case 'is_adept':
           case 'is_mage':
+          case 'is_shaman':
             options[value] = true;
             break;
         }
@@ -575,6 +576,13 @@ function view_generator() {
     if ($('#mob_generator .entry_form input[name="special_magician"]').prop('checked')) {
       special = $.extend({}, options);
       special.is_mage = true;
+      mook = gen.mook(special);
+      mook.name = mob_name + ' ' + mook.name;
+      mob.push(mook);
+    }
+        if ($('#mob_generator .entry_form input[name="special_shaman"]').prop('checked')) {
+      special = $.extend({}, options);
+      special.is_shaman = true;
       mook = gen.mook(special);
       mook.name = mob_name + ' ' + mook.name;
       mob.push(mook);

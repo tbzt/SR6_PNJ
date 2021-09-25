@@ -462,7 +462,7 @@ var render = {
     });
 
     // Don't let Mages or Adepts have augmentations
-    if (data.special.is_adept === true || data.special.is_mage === true)
+    if (data.special.is_adept === true || data.special.is_mage === true || data.special.is_shaman === true)
       $mook.find('.other_information .augments').hide();
     else
       redraw_augmentations();
@@ -492,7 +492,7 @@ var render = {
           $weapon.find('button').prop('weapon_name', weapon);
         }
         else if (weapon.weapon_focus === true) {
-          $weapon.find('.weapon').html(weapon.name + ' (Weapon Focus)');
+          $weapon.find('.weapon').html(weapon.name + ' (Arme Focus)');
           $weapon.find('button').prop('weapon_name', weapon.name);
         }
         else if (weapon.magic_focus === true) {
@@ -683,6 +683,8 @@ var render = {
         description += ', Adepte';
       if (data.special.is_mage)
         description += ', Magicien';
+      if (data.special.is_shaman)
+        description += ', Chaman';
 
       $mook.find('.npc_description').html(description);
     }
@@ -785,7 +787,7 @@ var render = {
       $mook.find('.information .matrix_initiative').hide();
     }
 
-    if (data.special.is_mage === true) {
+    if (data.special.is_mage === true || data.special.is_shaman === true) {
       var astral_initiative = this.calc_initiative(data, augmented_attributes, 'astrale');
       $mook.find('.information .astral_initiative .value').html(astral_initiative.base + ' + ' + astral_initiative.dice + 'D6');
 
@@ -802,6 +804,44 @@ var render = {
     else {
       $mook.find('.information .astral_initiative').hide();
     }
+
+    // Drain resistance
+    if (data.special.is_mage === true || data.special.is_shaman === true) {
+
+    // Drain resistance for shaman
+    if (data.special.is_shaman === true) {    
+    var drain_resistance = data.attributes.charisma + data.attributes.will;
+    $mook.find('.information .drain_resistance .value').html(drain_resistance);
+    $mook.find('.information .drain_resistance button').button().click(function () {
+    var d = drain_resistance;
+    if (wp.penalty !== 0)
+        d += wp.penalty;
+        var i = roll.d(d), total = i.hits;
+    $mook.find('.information .drain_resistance .result').html(total + wp.penalty);
+      });
+    }
+
+    // Drain resistance for mage
+    if (data.special.is_mage === true) {     
+    var drain_resistance = data.attributes.logic + data.attributes.will;
+
+    $mook.find('.information .drain_resistance .value').html(drain_resistance);
+    $mook.find('.information .drain_resistance button').button().click(function () {
+      var d = drain_resistance;
+
+      if (wp.penalty !== 0)
+        d += wp.penalty;
+
+      var i = roll.d(d), total = i.hits;
+
+        $mook.find('.information .drain_resistance .result').html(total + wp.penalty);
+      });
+    }
+  }
+    else {
+      $mook.find('.information .drain_resistance').hide();
+    }
+
 
     // Condition Monitor
     $mook.find('.information .condition_monitor').append(render.get_condition_monitor(wp, data));
@@ -1220,9 +1260,9 @@ var render = {
         }
 
         if (i.glitch)
-          total += ',g';
+          total += ',complication';
         else if (i.crit_glitch)
-          total += ',G';
+          total += ',Echec critique';
 
         $gear.find('.result').html(total);
       });
@@ -1242,7 +1282,7 @@ var render = {
         switch (data.gear[i].rating) {
           default:
           case 1:
-            complex_gear.push('Erika MCD-1 cyberdeck (Indice 1, Atts 4 3 2 1, Programmes 1)');
+            complex_gear.push('Erika MCD-1 cyberdeck (Indice 1, Atts 4 3 2 1, Programme 1)');
             break;
           case 2:
             complex_gear.push('Hermes Chariot cyberdeck (Indice 2, Atts 5 4 3 2, Programmes 2)');
@@ -1330,24 +1370,38 @@ var render = {
         }
 
         if (data.special.powers[i].hasOwnProperty('attribute')) {
-          power = data.special.powers[i].attribute + 'améliorée ';
+          power = data.special.powers[i].attribute + ' améliorée ';
         }
 
         power += ' ' + data.special.powers[i].rating;
 
+        if (data.special.powers[i].hasOwnProperty('power_description')) {
+          power += ' : ' + data.special.powers[i].power_description;
+        }
+
+
         powers.push(power);
       }
 
-      $mook.find('.information .powers .value').html(powers.join(', '));
+      $mook.find('.information .powers .value').html(powers.join('<br>'));
     }
     else {
       $mook.find('.information .powers').hide();
     }
 
     // Mage spells
-    if (data.special.is_mage === true)
+    if (data.special.is_mage === true || data.special.is_shaman === true)
     {
-      $mook.find('.information .spells .value').html(data.special.spells.join(', '));
+      var spells = [], spell;
+
+      for (i in data.special.spells) {
+        spell = data.special.spells[i].name;
+      
+        spell += ' (' + data.special.spells[i].type + ' ⚟ ' + data.special.spells[i].portee + ' 🕗 ' + data.special.spells[i].duree + ' ⚠ ' + data.special.spells[i].drain + ') : ' + data.special.spells[i].description + '';
+
+        spells.push(spell);
+      }
+      $mook.find('.information .spells .value').html(spells.join('<br>'));
     }
     else
     {
@@ -1400,6 +1454,8 @@ var render = {
         description += ' - Adepte';
       if (data.special.is_mage)
         description += ' - Magicien';
+      if (data.special.is_shaman)
+        description += ' - Shaman';
 
       $mook.find('.npc_description').html(description);
     }
@@ -1480,7 +1536,7 @@ var render = {
       $mook.find('.information .matrix_initiative').hide();
     }
 
-    if (data.special.is_mage === true) {
+    if (data.special.is_mage === true || data.special.is_shaman === true) {
       initiative = this.calc_initiative(data, augmented_attributes, 'astral');
       $mook.find('.information .astral_initiative .value').html(initiative.base + ' + ' + initiative.dice + 'D6');
     }
@@ -1858,9 +1914,17 @@ var render = {
     }
 
     // Mage spells
-    if (data.special.is_mage === true)
+    if (data.special.is_mage === true || data.special.is_shaman === true)
     {
-      $mook.find('.information .spells .value').html(data.special.spells.join(', '));
+            var spells = [], spell;
+
+      for (i in data.special.spells) {
+        spell = data.special.spells[i].name;
+
+        spells.push(spell);
+      }
+
+      $mook.find('.information .spells .value').html(spells.join(', '));
     }
     else
     {
