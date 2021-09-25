@@ -575,11 +575,15 @@ var render = {
           var gear_display = gear.name;
 
           if (gear.hasOwnProperty('rating')) {
-            gear_display += ' rating ' + gear.rating + '';
+            gear_display += ' indice ' + gear.rating + '';
           }
 
           if (gear.hasOwnProperty('quantity')) {
             gear_display += ' (' + gear.quantity + ')';
+          }
+
+           if (gear.hasOwnProperty('description')) {
+            gear_display += ' : ' + gear.description;
           }
 
           $gear.find('.gear').html(gear_display);
@@ -1266,6 +1270,11 @@ var render = {
         if (item.hasOwnProperty('augments')) {
           item_display += ' [' + item.augments.join(', ') + ']';
         }
+
+
+           if (item.hasOwnProperty('gear_description')) {
+            item_display += ' : ' + item.gear_description;
+          }
 
         complex_gear.push(item_display);
       }
@@ -2116,7 +2125,7 @@ var render = {
         wp.penalty = parseInt($(this).prop('penalty'));
         if (isNaN(wp.penalty))
           wp.penalty = 0;
-        $cm.find('.penalty').html('Penalty: ' + wp.penalty);
+        $cm.find('.penalty').html('Malus : ' + wp.penalty);
       });
 
       // Add a visual to the boxes

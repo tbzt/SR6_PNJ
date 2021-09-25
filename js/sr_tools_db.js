@@ -2251,16 +2251,19 @@ var db = {
     {
       name: 'Lunettes',
       rating: 2,
-      augments: ['Interface visuelle', 'Smartlink', 'Vision nocturne']
+      augments: ['Interface visuelle', 'Smartlink', 'Vision nocturne'],
+      gear_description: '+1D pour la perception visuelle, +2D pour tirer si smartgun'
     },
     {
       name: 'Binoculaires',
       rating: 2,
-      augments: ['Interface visuelle', 'Smartlink', 'Vision thermographique']
+      augments: ['Interface visuelle', 'Smartlink', 'Vision thermographique'],
+      gear_description: '+1D pour la perception visuelle, +2D pour tirer si smartgun'
     },
     {
       name: 'Jazz',
-      quantity: 2
+      quantity: 2,
+      gear_description: '+1 CON, +1 AGI, +2 FOR, +1 VOL, +2D6 initiative, Endurance à la douleur (10*1D6mn)'
     },
     {
       name: 'Kamikaze',
@@ -2306,7 +2309,8 @@ var db = {
       rating: 2
     },
     {
-      name: 'Lampe-torche'
+      name: 'Lampe-torche',
+      gear_description: 'c\'est une superbe lampe-torche.' 
     },
     {
       name: 'Stim Patch',
