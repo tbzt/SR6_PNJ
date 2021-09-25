@@ -753,7 +753,7 @@ var render = {
       }
     });
 
-    init_display += ' [Majeure ' + major + '/mineure ' + minor + ']';
+    init_display += ' [' + major + 'M & ' + minor + 'm]';
 
     $mook.find('.information .initiative .value').html(init_display);
 
@@ -1578,7 +1578,7 @@ var render = {
       if (skill == 'Combat rapproché') block += data.skills[skill];
       if (skill == 'Athlétisme') dodge += data.skills[skill];
     }
-    var defense_display = 'Base ' + defense_test + ' / Bloquer ' + block + ' / Esquiver ' + dodge;
+    var defense_display = defense_test + ' / Bloquer ' + block + ' / Esquiver ' + dodge;
     $mook.find('.information .defense_test .value').html(defense_display);
 
     // Condition Monitor
