@@ -156,10 +156,10 @@ function view_cast(show_intro) {
         $clone_dialog.dialog('open');
       });
 
-      $char_template.find('.created_date').html('Created: ' + render.format_string_date(cast.created));
+      $char_template.find('.created_date').html('Créé : ' + render.format_string_date(cast.created));
 
       if (cast.edited)
-        $char_template.find('.edited_date').html('Last Edited: ' + render.format_string_date(cast.edited));
+        $char_template.find('.edited_date').html('Dernière modification : ' + render.format_string_date(cast.edited));
       else
         $char_template.find('.edited_date').hide();
 

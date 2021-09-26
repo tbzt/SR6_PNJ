@@ -1455,7 +1455,7 @@ var render = {
       if (data.special.is_mage)
         description += ' - Magicien';
       if (data.special.is_shaman)
-        description += ' - Shaman';
+        description += ' - Chaman';
 
       $mook.find('.npc_description').html(description);
     }
