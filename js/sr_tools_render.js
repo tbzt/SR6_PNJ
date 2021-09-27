@@ -1002,6 +1002,25 @@ var render = {
       $mook.find('.information .augments').hide();
     }
 
+        // Move / Sprint cacluation / rolls
+
+    var movement = this.calc_movement(data, augmented_attributes);
+    var sprint_test = movement.sprint_dice;
+
+    $mook.find('.information .sprint .value').html(movement.move + ' / ' + movement.sprint_base + ' + (' + movement.sprint_per_hit_increase + ' m x ' 
+      + movement.sprint_dice + 'D6)');
+
+    $mook.find('.information .sprint button').button().click(function () {
+        var d = sprint_test;
+        var distance_per_hit = 1;
+        var i = roll.d(d);
+        var base_distance = 15;
+        var total = base_distance + (distance_per_hit * i.hits);
+
+        $mook.find('.information .sprint .result').html(total + ' mètres');
+      });
+
+
     // Armor & Damage Resistance
     var soak = parseInt(augmented_attributes.body);
 
@@ -1571,6 +1590,13 @@ var render = {
       $mook.find('.information .astral_initiative').hide();
     }
 
+        // Move / Sprint
+    var movement = this.calc_movement(data, augmented_attributes);
+    var sprint_test = movement.sprint_dice;
+
+    $mook.find('.information .sprint .value').html(movement.move + ' / ' + movement.sprint_base + ' + (' + movement.sprint_per_hit_increase + ' m x ' 
+      + movement.sprint_dice + 'D6)');
+
     // Defense Rating
     var defense_rating = parseInt(augmented_attributes.body);
 
@@ -2099,7 +2125,7 @@ var render = {
 
       // Also look through the gear section for Qi Foci
       for (var i in data.gear) {
-        if (data.gear[i].hasOwnProperty('name') && data.gear[i].name === 'Qi Focus') {
+        if (data.gear[i].hasOwnProperty('name') && data.gear[i].name === 'Focus Qi') {
           var focus = data.gear[i];
 
           if (focus.hasOwnProperty('type') && focus.type === 'Attribut amélioré') {
@@ -2163,6 +2189,23 @@ var render = {
       base_augmented: base_aug,
       dice: dice,
       dice_augmented: dice_aug
+    }
+  },
+
+  calc_movement: function (data, augmented_attributes) {
+    var move_distance = 10;
+    var sprint_base_distance = 15;
+    var sprint_per_hit_increase = 1;
+    var sprint_dice = augmented_attributes.agility;
+    for (skill in data.skills) {  
+      if (skill == 'Athlétisme') sprint_dice = data.skills[skill] + sprint_dice;
+    }
+
+    return {
+      move: move_distance,
+      sprint_base: sprint_base_distance,
+      sprint_per_hit_increase: sprint_per_hit_increase,
+      sprint_dice: sprint_dice
     }
   },
 

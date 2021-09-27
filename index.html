@@ -26,7 +26,7 @@
 
 <body>
 	<div class="top_bar">
-		<div class="title">Shadowrun Mob Master</div>
+		<div class="title">Shadowrun 6e - Gestion de PNJ</div>
 		<div class="version"></div>
 		<div class="top_bar_roller">
 			<div class="numbers">
@@ -194,8 +194,8 @@
 				<p>Les PNJ, par défaut, ont un moniteur de condition combiné basé sur leurs scores CON et VOL. Si vous voulez que vos PNJ aient par défaut des moniteurs séparées pour les dégâts d'étourdissement et les dégâts physiques, c'est ici.</p> 
 				<p>Les modifications ici se répercuteront sur tous les PNJ créés après ce point.  Tous les PNJ déjà existants devront être édités individuellement.</p>
 				<div setting="condition_monitor">
-					<input type="radio" id="combined" name="condition_monitor"><label for="combined">Combined</label>
-					<input type="radio" id="separate" name="condition_monitor"><label for="separate">Separate</label>
+					<input type="radio" id="combined" name="condition_monitor"><label for="combined">Combinés</label>
+					<input type="radio" id="separate" name="condition_monitor"><label for="separate">Séparés</label>
 				</div>
 			</div>
 
@@ -204,9 +204,9 @@
 				<p>Les PNJ subissent normalement un malus de -1D par 3 cases sur leur moniteur de condition. Cela peut être changé en toutes les 2 cases, toutes les cases, ou même ignorer les pénalités de blessures.</p> 
 				<p>Les changements ici se refléteront sur tous les PNJ créés après. Tous les PNJ déjà existants devront être édités individuellement.</p>
 				<div setting="wound_penalty">
-					<input type="radio" id="3" name="wound_penalty"><label for="3">-1 pour 3 cases</label>
-					<input type="radio" id="2" name="wound_penalty"><label for="2">-1 pour 2 cases</label>
-					<input type="radio" id="1" name="wound_penalty"><label for="1">-1 par case</label>
+					<input type="radio" id="3" name="wound_penalty"><label for="3">-1D pour 3 cases</label>
+					<input type="radio" id="2" name="wound_penalty"><label for="2">-1D pour 2 cases</label>
+					<input type="radio" id="1" name="wound_penalty"><label for="1">-1D par case</label>
 					<input type="radio" id="0" name="wound_penalty"><label for="0">Pas de malus de blessure</label>
 				</div>
 			</div>
@@ -471,6 +471,11 @@
 					<div class="value"></div>
 				</div>
 
+				<div class="sprint">
+					<label>Mouvement</label>
+					<div class="value"></div>
+				</div> 
+
 				<div class="defense_rating">
 					<label>SD</label>
 					<div class="value"></div>
@@ -608,6 +613,15 @@
 						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
+				</div>
+
+				<div class="sprint">
+					<label>Mouvement</label>
+					<div class="rollable">
+						<div class="value"></div>
+						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<div class="result"></div>
+					</div>	
 				</div>
 
 				<div class="defense_rating">
