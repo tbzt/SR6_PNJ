@@ -332,7 +332,7 @@ var db = {
             rating: Math.ceil(rating / 3)
           });
           res.augmentations.push({
-            name: 'Réflexes cablés',
+            name: 'Réflexes câblés',
             rating: Math.ceil(rating / 3)
           });
         }
@@ -2385,7 +2385,7 @@ var db = {
       max_rating: 3
     },
     {
-      name: 'Réflexes cablés',
+      name: 'Réflexes câblés',
       max_rating: 3
     },
     {

@@ -768,8 +768,8 @@ var render = {
     });
 
     if (data.special.is_decker === true) {
-      var matrix_initiative = this.calc_initiative(data, augmented_attributes, 'matricielle');
-      $mook.find('.information .matrix_initiative .value').html('Traitement de données + ' + matrix_initiative.base + ' + ' + matrix_initiative.dice + 'D6');
+      var matrix_initiative = this.calc_initiative(data, augmented_attributes, 'matrix');
+      $mook.find('.information .matrix_initiative .value').html('Traitement de données + ' + matrix_initiative.base + ' + ' + matrix_initiative.dice + 'D6 [1M& ' + initiative.dice + 'm]');
 
       $mook.find('.information .matrix_initiative button').button().click(function () {
         var i, total = matrix_initiative.base;
@@ -788,8 +788,8 @@ var render = {
     }
 
     if (data.special.is_mage === true || data.special.is_shaman === true) {
-      var astral_initiative = this.calc_initiative(data, augmented_attributes, 'astrale');
-      $mook.find('.information .astral_initiative .value').html(astral_initiative.base + ' + ' + astral_initiative.dice + 'D6');
+      var astral_initiative = this.calc_initiative(data, augmented_attributes, 'astral');
+      $mook.find('.information .astral_initiative .value').html(astral_initiative.base + ' + ' + astral_initiative.dice + 'D6 [1M & ' + initiative.dice + 'm]');
 
       $mook.find('.information .astral_initiative button').button().click(function () {
         var i, total = astral_initiative.base;
@@ -804,6 +804,33 @@ var render = {
     else {
       $mook.find('.information .astral_initiative').hide();
     }
+
+    // Defense Rating
+    var defense_rating = parseInt(augmented_attributes.body);
+
+    data.augmentations.forEach(function (aug) {
+      if (aug.name === 'Armure dermique' || aug.name === 'Orthoderme') {
+        defense_rating += aug.rating;
+      }
+
+      if (aug.name === 'Ossature renforcée') {
+        if (aug.rating == 3)
+          defense_rating += 2;
+        else
+          defense_rating += 1;
+      }
+    });
+
+    if (data.armor.length !== 0) {
+      var armors = db.get_armor_list(), armor;
+
+      if (armors.hasOwnProperty(data.armor)) {
+        armor = armors[data.armor];
+        defense_rating += armor;
+      }
+    }
+
+    $mook.find('.information .defense_rating .value').html(defense_rating);
 
     // Drain resistance
     if (data.special.is_mage === true || data.special.is_shaman === true) {
@@ -1524,13 +1551,13 @@ var render = {
       }
     });
 
-    init_display += ' [Majeure ' + major + '/mineure ' + minor + ']';
+    init_display += ' [' + major + 'M & ' + minor + 'm]';
 
     $mook.find('.information .initiative .value').html(init_display);
 
     if (data.special.is_decker === true) {
-      initiative = this.calc_initiative(data, augmented_attributes, 'matricielle');
-      $mook.find('.information .matrix_initiative .value').html('Traitement de données + ' + initiative.base + ' + ' + initiative.dice + 'D6');
+      initiative = this.calc_initiative(data, augmented_attributes, 'matrix');
+      $mook.find('.information .matrix_initiative .value').html('Traitement de données + ' + initiative.base + ' + ' + initiative.dice + 'D6 [1M & ' + initiative.dice + 'm]');
     }
     else {
       $mook.find('.information .matrix_initiative').hide();
@@ -1538,7 +1565,7 @@ var render = {
 
     if (data.special.is_mage === true || data.special.is_shaman === true) {
       initiative = this.calc_initiative(data, augmented_attributes, 'astral');
-      $mook.find('.information .astral_initiative .value').html(initiative.base + ' + ' + initiative.dice + 'D6');
+      $mook.find('.information .astral_initiative .value').html(initiative.base + ' + ' + initiative.dice + 'D6 [1M & ' + initiative.dice + 'm]');
     }
     else {
       $mook.find('.information .astral_initiative').hide();
@@ -2108,7 +2135,7 @@ var render = {
       // The display is difference because it is deck-config dependant
       base = data.attributes.intuition;
       base_aug = augmented_attributes.intuition;
-      dice = 4;
+      dice = 3;
     }
     else {
       data.augmentations.forEach(function (aug) {
