@@ -18,7 +18,7 @@ var storage = {
     localStorage.cast_tabs = JSON.stringify([
       {
         tab_id: 1,
-        name: 'Full Cast',
+        name: 'Tous',
         order: 1,
         characters: [] // This is an array of {character_id, order} objects
       }
@@ -221,7 +221,7 @@ var storage = {
     delete new_character.character_id;
 
     // Change the name, either adding "Copy", or updating the copy #
-    var copiedCharacter = new RegExp('.* Copy ([0-9])([0-9])');
+    var copiedCharacter = new RegExp('.* Clone ([0-9])([0-9])');
     var copyTest = copiedCharacter.exec(new_character.name);
 
     if (copiedCharacter.test(new_character.name)) {
@@ -236,11 +236,11 @@ var storage = {
 
       new_character.name += newName;
     }
-    else if (new_character.name.slice(-5) == ' Copy') {
+    else if (new_character.name.slice(-5) == ' Clone') {
       new_character.name += ' 01';
     }
     else {
-      new_character.name += ' Copy';
+      new_character.name += ' Clone';
     }
 
     new_character = this.set_character(new_character);

@@ -230,18 +230,19 @@ var gen = {
     mook.condition_monitor = storage.setting('condition_monitor');
     mook.wound_penalty = storage.setting('wound_penalty');
 
-    // If we don't have a gender, assign a binary gender.
-    // Will limiting gender to a binary decision piss off some people? Probably yes.
-    // However, the author is not spending time developing a fully politically correct gender-determination system at this time.
-    // If you really want to hear how the author feels about the situation, buy him a beer
-    if (options.gender !== '♂' && options.gender !== '♂') {
+    // If we don't have a gender, assign a gender, non-binary
+    if (options.gender !== '♂' && options.gender !== '♀' && options.gender !== '⚥') {
       if (options.is_contact) {
         // Even split
-        if (roll.dval(2) === 2) {
+        var d = roll.dval(10);
+        if (d < 5) {
           mook.gender = '♂';
         }
+        else if (d < 8) {
+          mook.gender = '♀';
+        }
         else {
-          mook.gender = '♂';
+          mook.gender = '⚥';
         }
       }
       else {
@@ -250,7 +251,7 @@ var gen = {
           mook.gender = '♂';
         }
         else {
-          mook.gender = '♂';
+          mook.gender = '♀';
         }
       }
     }
