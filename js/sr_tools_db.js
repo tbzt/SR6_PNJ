@@ -912,7 +912,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Silence',
@@ -920,7 +920,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -929,7 +929,7 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
           );
           break;
@@ -943,7 +943,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Silence',
@@ -951,7 +951,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -960,7 +960,7 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
             {
               name: 'Barrière physique',
@@ -969,7 +969,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '6',
-              description: 'indice de Structure égal à (Magie + succès d’un test de Sorcellerie + Magie). Le sort de base génère une barrière de deux mètres sur deux et de deux centimètres d’épaisseur. Extension de zone peut permettre d’ajouter deux mètres en longueur et en largeur (mais pas en épaisseur) à chaque fois qu’on choisit cet effet.'
+              description: 'Indice de Structure égal à (Magie + succès d’un test de Sorcellerie + Magie). Le sort de base génère une barrière de deux mètres sur deux et de deux centimètres d’épaisseur. Extension de zone peut permettre d’ajouter deux mètres en longueur et en largeur (mais pas en épaisseur) à chaque fois qu’on choisit cet effet.'
             },
           );
           break;
@@ -983,7 +983,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Silence',
@@ -991,7 +991,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -1000,7 +1000,7 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
             {
               name: 'Détection de la vie',
@@ -1009,7 +1009,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '3',
-              description: 'Détecte les êtres dotés d’une conscience'
+              description: 'Détecte les êtres dotés d’une conscience.'
             },
           );
           break;
@@ -1023,7 +1023,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Silence',
@@ -1031,7 +1031,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -1040,7 +1040,7 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
             {
               name: 'Soins',
@@ -1049,7 +1049,7 @@ var db = {
               dmg: 'E',
               duree: 'P',
               drain: '3',
-              description: 'test de Sorcellerie + Magie (5 - Essence), ce qui fournit donc un succès automatique si la cible a une Essence de 6. Il permet de récupérer 1 case de dommages au choix étourdissants, physiques ou de surplus par succès net. Les blessures ne peuvent être traitées qu’une seule fois par un sort de Santé (y compris Soins purificateurs, Soins refroidissants et Soins réchauffants).'
+              description: 'Test de Sorcellerie + Magie (5 - Essence), ce qui fournit donc un succès automatique si la cible a une Essence de 6. Il permet de récupérer 1 case de dommages au choix étourdissants, physiques ou de surplus par succès net. Les blessures ne peuvent être traitées qu’une seule fois par un sort de Santé (y compris Soins purificateurs, Soins refroidissants et Soins réchauffants).'
             },
           );
           break;
@@ -1063,7 +1063,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Silence',
@@ -1071,7 +1071,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -1080,7 +1080,7 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
             {
               name: 'Augmentation de réflexes',
@@ -1089,7 +1089,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '5',
-              description: 'test de Sorcellerie + Magie (5 - Essence), ce qui fournit donc un succès automatique si la cible a une Essence de 6. Le mage peut choisir le nombre de succès nets qu’il utilise pour augmenter à la fois le rang de Réaction et le nombre de dés d’initiative de la cible au taux de 1 point d’augmentation et de 1 dé d’initiative par succès net sans pouvoir dépasser 5 dés d’initiative. Pour chaque succès net utilisé après le premier, le Drain du sort est augmenté de 1 point. Les effets de ce sort ne s’appliquent pas en RV'
+              description: 'Test de Sorcellerie + Magie (5 - Essence), ce qui fournit donc un succès automatique si la cible a une Essence de 6. Le mage peut choisir le nombre de succès nets qu’il utilise pour augmenter à la fois le rang de Réaction et le nombre de dés d’initiative de la cible au taux de 1 point d’augmentation et de 1 dé d’initiative par succès net sans pouvoir dépasser 5 dés d’initiative. Pour chaque succès net utilisé après le premier, le Drain du sort est augmenté de 1 point. Les effets de ce sort ne s’appliquent pas en RV.'
             },
             {
               name: 'Sens du combat',
@@ -1098,7 +1098,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '5',
-              description: 'les succès nets du test de Lancement de sorts s’ajoutent à aux réserves de dés de défense et pour les tests de surprise (voir p. 112) tant que le sort est maintenu.'
+              description: 'Les succès nets du test de Lancement de sorts s’ajoutent à aux réserves de dés de défense et pour les tests de surprise (voir p. 112) tant que le sort est maintenu.'
             },
           );
           break;
@@ -1120,7 +1120,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -1129,7 +1129,7 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
             {
               name: 'Clairvoyance',
@@ -1147,7 +1147,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '4',
-              description: 'octroie l\'état Invisibilité supérieure'
+              description: 'Octroie l\'état Invisibilité supérieure (voir p. 57).'
             },
           );
           break;
@@ -1161,7 +1161,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Silence',
@@ -1169,7 +1169,7 @@ var db = {
               portee: 'C',
               duree: 'M',
               drain: '3',
-              description: 'impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage'
+              description: 'Impose à la cible l’état Silencieux (voir p. 57) avec un indice égal aux succès nets obtenus au test de Sorcellerie + Magie. Cet indice agit comme un seuil pour toute tentative visant à entendre le personnage.'
             },
             {
               name: 'Sphère étourdissante',
@@ -1178,25 +1178,23 @@ var db = {
               dmg: 'E',
               duree: 'I',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Canalise le mana de manière à étourdir.'
             },
             {
               name: 'Armure',
               type: 'combat direct M',
-              portee: 'LdV(z)',
-              dmg: 'E',
-              duree: 'I',
+              portee: 'C',
+              duree: 'M',
               drain: '4',
-              description: 'canalise le mana de manière à étourdir'
+              description: 'Effectuez un test de Sorcellerie + Magie et ajoutez les succès nets au Score Défensif de la cible.'
             },
             {
               name: 'Agonie',
               type: 'P',
               portee: 'C',
-              dmg: 'E',
               duree: 'M',
               drain: '4',
-              description: 'test de Sorcellerie + Magie et ajoutez les succès nets au Score Défensif de la cible'
+              description: 'Test de Sorcellerie + Magie et ajoutez les succès nets au Score Défensif de la cible.'
             },
           );
           break;
@@ -1227,8 +1225,9 @@ var db = {
 
       // Skills
       res.skills.Piratage = rating + 2;
+      res.skills.Electronique = rating;
 
-      if (['corpsec', 'htr', 'mob', 'specops'].includes(options.professional_type)) {
+      if (['corpsec', 'mob'].includes(options.professional_type)) {
         res.skills.Influence = rating;
         res.skills.Piratage = rating + 1;
         res.skills.Electronique = rating + 1;
@@ -1236,6 +1235,7 @@ var db = {
 
       if (['htr', 'specops'].includes(options.professional_type)) {
         res.skills.Ingénierie = rating;
+        res.skills.Electronique = rating + 2;
       }
 
       // Augmentations & Drugs
@@ -1254,11 +1254,18 @@ var db = {
         res.gear.push({
           name: 'Psyche',
           quantity: 2,
-          gear_description: '-2 REA, +1 VOL, -1D pour les actions basées sur les attributs physiques'
+          gear_description: '-2 REA, +1 VOL, -1D pour les actions basées sur les attributs physiques.'
         });
       }
 
-      if (rating > 1) {
+      if (rating > 3) {
+        res.augmentations.push({
+          name: 'Cyberjack',
+          rating: rating - 2,
+          descr: '(Td/F : ' + rating+1 + ' ' + rating + ')'
+        });
+      }
+      else if (rating > 1) {
         res.augmentations.push({
           name: 'Datajack'
         });
@@ -1274,7 +1281,7 @@ var db = {
         case 6:
         case 5:
           res.gear.push({
-            name: 'Shiawase Cyber-5',
+            name: 'Shiawase Cyber-6',
             type: 'cyberdeck',
             rating: 5,
             programs: ['Armure (+2 au SD)', 'Biofeedback', 'Décryptage (+2D pour Décrypter)', 'Chiffrement (+2D pour Chiffrer)', 'Fork (avoir 2 cibles)', 'Exploitation (+2 SO pour Piratage)', 'Verrouillage (verrouille la connexion si dommages matriciels)']
@@ -1284,7 +1291,7 @@ var db = {
         case 4:
         case 3:
           res.gear.push({
-            name: 'Hermes Chariot',
+            name: 'Spinrad Falcon',
             type: 'cyberdeck',
             rating: 2,
             programs: ['Armure (+2 au SD)', 'Décryptage (+2D pour Décrypter)', 'Chiffrement (+2D pour Chiffrer)', 'Fork (avoir 2 cibles)', 'Exploitation (+2 SO pour Piratage)']
@@ -1293,7 +1300,7 @@ var db = {
 
         default:
           res.gear.push({
-            name: 'Erika MCD-1',
+            name: 'Erika MCD-6',
             type: 'cyberdeck',
             rating: 1,
             programs: ['Armure (+2 au SD)', 'Overclock (+2D pour une action dont dé libre)', 'Fork (avoir 2 cibles)']
@@ -1840,7 +1847,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Tempête de glace',
@@ -1848,7 +1855,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Sphère de foudre',
@@ -1857,7 +1864,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '6',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
           );
           break;
@@ -1870,7 +1877,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques'
             },
             {
               name: 'Tempête de glace',
@@ -1878,7 +1885,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
             },
             {
               name: 'Sphère de foudre',
@@ -1887,7 +1894,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '6',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Invisibilité',
@@ -1896,7 +1903,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '3',
-              description: 'octroie au personnage ciblé l’état Invisible (p. 57) et l’indice devient le seuil qu’il faut atteindre pour tout test visant à voir ce personnage.'
+              description: 'Octroie au personnage ciblé l’état Invisible (p. 57) et l’indice devient le seuil qu’il faut atteindre pour tout test visant à voir ce personnage.'
             },
           );
           break;
@@ -1909,7 +1916,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Tempête de glace',
@@ -1917,7 +1924,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
             },
             {
               name: 'Sphère de foudre',
@@ -1926,7 +1933,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '6',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Détection de la magie',
@@ -1935,7 +1942,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '4',
-              description: 'inclut des focus, des réactifs, des sorts actifs, des runes, des préparations alchimiques, des esprits et des rituels actifs'
+              description: 'Inclut des focus, des réactifs, des sorts actifs, des runes, des préparations alchimiques, des esprits et des rituels actifs.'
             },
           );
           break;
@@ -1948,7 +1955,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Tempête de glace',
@@ -1956,7 +1963,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Sphère de foudre',
@@ -1965,7 +1972,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '6',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Soins',
@@ -1974,7 +1981,7 @@ var db = {
               dmg: 'E',
               duree: 'P',
               drain: '3',
-              description: 'test de Sorcellerie + Magie (5 - Essence), ce qui fournit donc un succès automatique si la cible a une Essence de 6. Il permet de récupérer 1 case de dommages au choix étourdissants, physiques ou de surplus par succès net. Les blessures ne peuvent être traitées qu’une seule fois par un sort de Santé (y compris Soins purificateurs, Soins refroidissants et Soins réchauffants).'
+              description: 'Test de Sorcellerie + Magie (5 - Essence), ce qui fournit donc un succès automatique si la cible a une Essence de 6. Il permet de récupérer 1 case de dommages au choix étourdissants, physiques ou de surplus par succès net. Les blessures ne peuvent être traitées qu’une seule fois par un sort de Santé (y compris Soins purificateurs, Soins refroidissants et Soins réchauffants).'
             },
           );
           break;
@@ -1987,7 +1994,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Tempête de glace',
@@ -1995,7 +2002,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Sphère de foudre',
@@ -2004,7 +2011,7 @@ var db = {
               dmg: 'P',
               duree: 'M',
               drain: '3',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Ténèbres',
@@ -2013,7 +2020,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '5',
-              description: 'pour chaque succès net obtenu, vous pouvez augmenter (grâce à Lumière) ou baisser (grâce à Ténèbres) le niveau de luminosité de la zone autour de vous, ce qui peut vous aider à déterminer si vous gagnez de l’Atout en fonction de l’environnement et de la visibilité (p. 115). '
+              description: 'Pour chaque succès net obtenu, vous pouvez augmenter (grâce à Lumière) ou baisser (grâce à Ténèbres) le niveau de luminosité de la zone autour de vous, ce qui peut vous aider à déterminer si vous gagnez de l’Atout en fonction de l’environnement et de la visibilité (p. 115). '
             },
             {
               name: 'Modeler le métal',
@@ -2022,7 +2029,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '5',
-              description: 'test de Sorcellerie + Magie contre Résistance d’objet ; la quantité de matériau que vous pouvez façonner est déterminée par les succès nets du test. '
+              description: 'Test de Sorcellerie + Magie contre Résistance d’objet ; la quantité de matériau que vous pouvez façonner est déterminée par les succès nets du test.'
             },
           );
           break;
@@ -2035,7 +2042,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques.'
             },
             {
               name: 'Tempête de glace',
@@ -2043,7 +2050,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Sphère de foudre',
@@ -2052,7 +2059,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '6',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Contrôles des pensées',
@@ -2061,7 +2068,7 @@ var db = {
               dmg: 'E',
               duree: 'L',
               drain: '4',
-              description: 'test de Sorcellerie + Magie contre Volonté + Logique'
+              description: 'Test de Sorcellerie + Magie contre Volonté + Logique.'
             },
             {
               name: 'Fantasme supérieur',
@@ -2070,7 +2077,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '4',
-              description: 'test de Sorcellerie + Magie : les succès nets forment le seuil à atteindre pour tout test de Volonté + Intuition visant à déjouer cette illusion.'
+              description: 'Test de Sorcellerie + Magie : les succès nets forment le seuil à atteindre pour tout test de Volonté + Intuition visant à déjouer cette illusion.'
             },
           );
           break;
@@ -2083,7 +2090,7 @@ var db = {
               portee: 'LdV',
               duree: 'I',
               drain: '4',
-              description: 'inflige à une cible des dommages physiques'
+              description: 'Inflige à une cible des dommages physiques'
             },
             {
               name: 'Tempête de glace',
@@ -2091,7 +2098,7 @@ var db = {
               portee: 'LdV(z)',
               duree: 'I',
               drain: '6',
-              description: 'affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Affecte les cibles avec un froid glacial en infligeant des dommages élémentaires de Froid (p. 114) et imposent l’état Frigorifié (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Sphère de foudre',
@@ -2100,7 +2107,7 @@ var db = {
               dmg: 'P',
               duree: 'I',
               drain: '6',
-              description: 'inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts'
+              description: 'Inflige des dommages élémentaires d’Électricité (p. 114), imposant l’état Électrocuté (p. 56) pendant un nombre de rounds de combat égal aux succès nets du test de Lancement de sorts.'
             },
             {
               name: 'Sonde mentale',
@@ -2109,7 +2116,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '5',
-              description: 'test de Sorcellerie + Magie contre Volonté + Logique ; les succès nets déterminent les informations que l’on peut extraire de la tête de la cible.'
+              description: 'Test de Sorcellerie + Magie contre Volonté + Logique ; les succès nets déterminent les informations que l’on peut extraire de la tête de la cible.'
             },
             {
               name: 'Confusion',
@@ -2118,7 +2125,7 @@ var db = {
               dmg: 'E',
               duree: 'M',
               drain: '3',
-              description: 'test de Sorcellerie + Magie contre Volonté + Logique : la cible subit l’état Confus avec un indice égal aux succès nets du test. La cible subit un malus à sa réserve de dés égal à cet indice pour tous ses tests sauf ceux de résistance aux dommages.'
+              description: 'Test de Sorcellerie + Magie contre Volonté + Logique : la cible subit l’état Confus avec un indice égal aux succès nets du test. La cible subit un malus à sa réserve de dés égal à cet indice pour tous ses tests sauf ceux de résistance aux dommages.'
             },
           );
           break;
@@ -2342,10 +2349,16 @@ var db = {
       sub_type: 'leg'
     },
     {
-      name: 'Cyberleg (Right)',
+      name: 'Cyberjambe (droite)',
       essence: 1,
       type: 'full cyberlimb',
       sub_type: 'leg'
+    },
+    {
+      name: 'Cyberjack',
+      essence: 1,
+      max_rating: 4,
+      descr: 1
     },
     {
       name: 'Datajack',

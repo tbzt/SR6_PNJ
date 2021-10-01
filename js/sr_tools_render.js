@@ -989,6 +989,12 @@ var render = {
           augment += ' ' + aug.rating;
         }
 
+
+        if (aug.hasOwnProperty('descr')) {
+          td = aug.rating + 1
+          augment += ' (Td/F : ' + td + '/'+ aug.rating + ')';
+        }
+
         if (aug.hasOwnProperty('augments')) {
           augment += ' (' + aug.augments.join(', ') + ')';
         }
@@ -1328,13 +1334,13 @@ var render = {
         switch (data.gear[i].rating) {
           default:
           case 1:
-            complex_gear.push('Erika MCD-1 cyberdeck (Indice 1, Atts 4 3 2 1, Programme 1)');
+            complex_gear.push('Cyberdeck Erika MCD-6 (indice 1, A/C 4 3, 2 programmes)');
             break;
           case 2:
-            complex_gear.push('Hermes Chariot cyberdeck (Indice 2, Atts 5 4 3 2, Programmes 2)');
+            complex_gear.push('Cyberdeck Spinrad Falcon (indice 2, A/C 5 4, 6 programmes)');
             break;
           case 5:
-            complex_gear.push('Shiawase Cyber-5 cyberdeck (Indice 5, Atts 8 7 6 5, Programmes 5)');
+            complex_gear.push('Cyberdeck Shiawase Cyber-6 (indice 5, A/C 8 7, 10 programmes)');
             break;
         }
       }
@@ -1393,8 +1399,10 @@ var render = {
       case 6:
         commlink = 'Transys Avalon';
     }
+    
+    firewall = data.commlink-1;
 
-    commlink += ' commlink (Indice ' + data.commlink + ')';
+    commlink += ' (indice ' + data.commlink + ' et TD/F ' + data.commlink + ' ' + firewall + ')';
 
     commlink = '<div>' + commlink + '</div>';
 
@@ -1441,9 +1449,9 @@ var render = {
       var spells = [], spell;
 
       for (i in data.special.spells) {
-        spell = data.special.spells[i].name;
+        spell = '<b>' + data.special.spells[i].name + '</b>';
       
-        spell += ' (' + data.special.spells[i].type + ' ⚟ ' + data.special.spells[i].portee + ' 🕗 ' + data.special.spells[i].duree + ' ⚠ ' + data.special.spells[i].drain + ') : ' + data.special.spells[i].description + '';
+        spell += '<br><br><table> <thead> <tr> <td>Type</td> <td>Portée</td> <td>Durée</td> <td>Drain</td> </tr </thead> <tbody> <tr> <td>' + data.special.spells[i].type + '</td> <td> ' + data.special.spells[i].portee + '</td> <td> ' + data.special.spells[i].duree + '</td> <td> ' + data.special.spells[i].drain + '</td> </tr> </tbody> </table> <br>' + data.special.spells[i].description + '<br>';
 
         spells.push(spell);
       }
@@ -1871,13 +1879,13 @@ var render = {
         switch (data.gear[i].rating) {
           default:
           case 1:
-            complex_gear.push('Erika MCD-1 cyberdeck (Indice 1, Atts 4 3 2 1, Programmes 1)');
+            complex_gear.push('Cyberdeck Erika MCD-6 (indice 1, A/C 4 3, 2 programmes)');
             break;
           case 2:
-            complex_gear.push('Hermes Chariot cyberdeck (Indice 2, Atts 5 4 3 2, Programmes 2)');
+            complex_gear.push('Cyberdeck Spinrad Falcon (indice 2, A/C 5 4, 6 programmes)');
             break;
           case 5:
-            complex_gear.push('Shiawase Cyber-5 cyberdeck (Indice 5, Atts 8 7 6 5, Programmes 5)');
+            complex_gear.push('Cyberdeck Shiawase Cyber-6 (indice 5, A/C 8 7, 10 programmes)');
             break;
         }
       }
@@ -1931,6 +1939,8 @@ var render = {
       case 6:
         commlink = 'Transys Avalon';
     }
+
+    firewall = data.commlink-1;
 
     commlink += ' (indice ' + data.commlink + ')';
 

@@ -334,6 +334,20 @@ div[template_holder]
 	font-weight: bold;
 }
 
+table, td {
+    border: 1px solid #cc15d7;
+    padding-left: auto;
+      margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+thead, tfoot {
+    background-color: #383838;
+    color: #fff;
+}
+
+
 .display_npc_wrapper .information > div > div,
 .display_npc_wrapper .information > div.skills > div > div
 {

@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta charset="utf-8">
-	<title>Shadowrun Mob Master</title>
+	<title>Shadowrun 6e - PNJ</title>
 	<link href="css/jquery-ui.css" rel="stylesheet">
 	<link href="css/sr_tools.css" rel="stylesheet">
 	<link href="css/sr_tools_print.css" media="print" rel="stylesheet">
@@ -282,12 +282,12 @@
 							<select name="professional_type">
 								<option value="">- Aléatoire</option>
 								<option value="civilian">Civil</option>
-								<option value="thug">Voyous</option>
+								<option value="thug">Voyou</option>
 								<option value="ganger">Ganger</option>
 								<option value="corpsec">Garde de sécurité corpo</option>
 								<option value="police">Membre des forces de l'ordre</option>
-								<option value="mob">Crime organisé</option>
-								<option value="cultist">Clergé & politicien</option>
+								<option value="mob">Membre du crime organisé</option>
+								<option value="cultist">Membre du clergé & politicien</option>
 								<option value="htr">Membre des forces d'intervention</option>
 								<option value="specops">Membre des forces spéciales</option>
 							</select>
@@ -372,19 +372,19 @@
 						</div>
 
 						<div class="input_row">
-							<label equalize>Professional Type</label>
+							<label equalize>Profession</label>
 							<select name="professional_type">
 								<option value="group">- Groupe aléatoire</option>
 								<option value="">- Individuellement aléatoire</option>
-								<option value="civilian">Civil</option>
+								<option value="civilian">Civils</option>
 								<option value="thug">Voyous</option>
-								<option value="ganger">Ganger</option>
-								<option value="corpsec">Garde de sécurité corpo</option>
-								<option value="police">Membre des forces de l'ordre</option>
-								<option value="mob">Crime organisé</option>
-								<option value="cultist">Clergé & politicien</option>
-								<option value="htr">Membre des forces d'intervention</option>
-								<option value="specops">Membre des forces spéciales</option>
+								<option value="ganger">Gangers</option>
+								<option value="corpsec">Gardes de sécurité corpo</option>
+								<option value="police">Membres des forces de l'ordre</option>
+								<option value="mob">Membres du crime organisé</option>
+								<option value="cultist">Membres du clergé & politicien</option>
+								<option value="htr">Membres des forces d'intervention</option>
+								<option value="specops">Membres des forces spéciales</option>
 							</select>
 						</div>
 
@@ -422,8 +422,8 @@
 
 		<div template="render__display_npc" class="display_npc_wrapper">
 			<div class="controls">
-				<button class="tiny_button action"><span title="Action mode" class="ui-icon ui-icon-play"></span></button>
-				<button class="tiny_button edit"><span title="Edit mode" class="ui-icon ui-icon-pencil"></span></button>
+				<button class="tiny_button action"><span title="Mode action" class="ui-icon ui-icon-play"></span></button>
+				<button class="tiny_button edit"><span title="Mode édition" class="ui-icon ui-icon-pencil"></span></button>
 			</div>
 			<div class="npc_name_wrapper">
 				<span class="ui-icon ui-icon-triangle-1-s"></span>
@@ -547,8 +547,8 @@
 
 		<div template="render__action_npc" class="display_npc_wrapper action_npc_wrapper">
 			<div class="controls">
-				<button class="tiny_button display"><span title="Display mode" class="ui-icon ui-icon-search"></span></button>
-				<button class="tiny_button edit"><span title="Edit mode" class="ui-icon ui-icon-pencil"></span></button>
+				<button class="tiny_button display"><span title="Mode affichage" class="ui-icon ui-icon-search"></span></button>
+				<button class="tiny_button edit"><span title="Mode édition" class="ui-icon ui-icon-pencil"></span></button>
 			</div>
 			<div class="npc_name_wrapper">
 				<span class="ui-icon ui-icon-triangle-1-s"></span>
@@ -585,7 +585,7 @@
 					<label>Initiative</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -594,7 +594,7 @@
 					<label>Initiative astrale</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -603,7 +603,7 @@
 					<label>Résistance au drain</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -612,7 +612,7 @@
 					<label>Initiative matricielle (HotSim)</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -621,7 +621,7 @@
 					<label>Mouvement</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>	
 				</div>
@@ -635,7 +635,7 @@
 					<label>Défense</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -644,7 +644,7 @@
 					<label>-&nbsp;&nbsp;Bloquer</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -653,7 +653,7 @@
 					<label>-&nbsp;&nbsp;Esquiver</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -662,7 +662,7 @@
 					<label>Résistance</label>
 					<div class="rollable">
 						<div class="value"></div>
-						<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+						<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 						<div class="result"></div>
 					</div>
 				</div>
@@ -703,7 +703,7 @@
 
 				<div class="spells">
 					<label>Sorts</label>
-					<div class="value"></div>
+					<div style="display:block;" class="value"></div>
 				</div>
 
 				<div class="powers">
@@ -720,8 +720,8 @@
 
 		<div template="render__edit_npc" class="display_npc_wrapper edit_npc_wrapper">
 			<div class="controls">
-				<button class="big_button save"><span title="Save Changes" class="ui-icon ui-icon-disk"></span></button>
-				<button class="big_button revert"><span title="Revert Changes" class="ui-icon ui-icon-cancel"></span></button>
+				<button class="big_button save"><span title="Enregistrer les modifications" class="ui-icon ui-icon-disk"></span></button>
+				<button class="big_button revert"><span title="Supprimer les modifications" class="ui-icon ui-icon-cancel"></span></button>
 			</div>
 			<div class="npc_name_wrapper">
 				<input id="name" placeholder="Nom..." />
@@ -862,43 +862,43 @@
 
 		<div template="action_skill" class="rollable">
 			<div class="skill"></div>
-			<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+			<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 			<div class="result"></div>
 		</div>
 
 		<div template="edit_skill">
 			<span class="skill"></span>
 			<div class="skill_rating"><select name="skill_rating"></select></div>
-			<button class="tiny_button remove_skill"><span title="Remove Skill" class="ui-icon ui-icon-close"></span></button>
+			<button class="tiny_button remove_skill"><span title="Supprimer la compétence" class="ui-icon ui-icon-close"></span></button>
 		</div>
 
 		<div template="edit_quality">
 			<span class="quality"></span>
-			<button class="tiny_button remove_quality"><span title="Remove Quality"
+			<button class="tiny_button remove_quality"><span title="Supprimer le trait"
 					class="ui-icon ui-icon-close"></span></button>
 		</div>
 
 		<div template="edit_augmentation">
 			<span class="augmentation"></span>
 			<div class="augmentation_rating"><select name="augmentation_rating"></select></div>
-			<button class="tiny_button remove_augmentation"><span title="Remove Skill"
+			<button class="tiny_button remove_augmentation"><span title="Supprimer l'augmentation"
 					class="ui-icon ui-icon-close"></span></button>
 		</div>
 
 		<div template="edit_weapon">
 			<span class="weapon"></span>
-			<button class="tiny_button remove_weapon"><span title="Remove Weapon"
+			<button class="tiny_button remove_weapon"><span title="Supprimer l'arme"
 					class="ui-icon ui-icon-close"></span></button>
 		</div>
 
 		<div template="edit_gear">
 			<span class="gear"></span>
-			<button class="tiny_button remove_gear"><span title="Remove Gear" class="ui-icon ui-icon-close"></span></button>
+			<button class="tiny_button remove_gear"><span title="Supprimer l'équipement" class="ui-icon ui-icon-close"></span></button>
 		</div>
 
 		<div template="display_weapon">
 			<div class="stats"></div>
-			<button class="tiny_button display"><span title="Roll" class="ui-icon ui-icon-seek-next"></span></button>
+			<button class="tiny_button display"><span title="Lance" class="ui-icon ui-icon-seek-next"></span></button>
 			<div class="result"></div>
 		</div>
 
@@ -912,7 +912,7 @@
 			<div class="entry"></div>
 			<div class="tools">
 				<button class="clone_cast_member"><span title="Clone" class="ui-icon ui-icon-copy"></span></button>
-				<button class="delete_cast_member"><span title="Delete" class="ui-icon ui-icon-circle-close"></span></button>
+				<button class="delete_cast_member"><span title="Suppression" class="ui-icon ui-icon-circle-close"></span></button>
 				<div class="created_date"></div>
 				<div class="edited_date"></div>
 				<div class="add_to_tab">
@@ -920,8 +920,8 @@
 						<span>Ajouter un PNJ aux groupes :</span>
 						<select name="tab_name"></select>
 					</div>
-					<button class="add_npc"><span title="Just Add">Ajouter un PNJ</span></button>
-					<button class="add_npc_and_switch"><span title="Add &amp; Switch">Ajouter &amp; changer de groupe</span></button>
+					<button class="add_npc"><span title="Ajouter">Ajouter un PNJ</span></button>
+					<button class="add_npc_and_switch"><span title="Ajouter &amp; Changer">Ajouter &amp; changer de groupe</span></button>
 				</div>
 
 				<div class="clone_dialog">Voulez-vous cloner ce PNJ ? Cela va générer un nouveau clone sans l'ajouter à aucun groupe.</div>
@@ -940,7 +940,7 @@
 			<div class="entry"></div>
 			<div class="tools">
 				<button class="clone_cast_member"><span title="Clone" class="ui-icon ui-icon-copy"></span></button>
-				<button class="delete_cast_member"><span title="Delete" class="ui-icon ui-icon-circle-close"></span></button>
+				<button class="delete_cast_member"><span title="Suppression" class="ui-icon ui-icon-circle-close"></span></button>
 				<div class="dialog">Supprimer ce personnage de ce groupe ? Ce personnage peut toujours être trouvé dans les ombres portées.
 				</div>
 				<div class="created_date"></div>

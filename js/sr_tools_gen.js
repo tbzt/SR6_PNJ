@@ -308,7 +308,7 @@ var gen = {
           mook.professional_description = 'Membre des forces de l\'ordre';
           break;
         case 'cultist':
-          mook.professional_description = 'Clergé';
+          mook.professional_description = 'Membre du clergé';
           break;
         case 'htr':
           mook.professional_description = 'Membre des forces d\'intervention';
