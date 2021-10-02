@@ -86,10 +86,11 @@ var db = {
     switch (type) {
       case 'civilian':
         res.skills.Perception = 2 + rating;
+        res.armor = 'Veste en cuir synthétique';
 
         if (roll.dval(6) === 6) {
           res.skills['Armes à feu'] = 1 + rating;
-          res.armor = 'Vêtements blindés';
+          res.armor = 'Vêtements pare-balles';
           res.weapons.push('Defiance EX Shocker');
         }
         break;
@@ -99,8 +100,9 @@ var db = {
         res.attributes.strength = 1;
         res.skills.Influence = 2 + rating;
         res.skills['Combat rapproché'] = 2 + rating;
-        res.weapons.push('Armes contondantes');
+        res.weapons.push('Massue');
         res.weapons.push('Couteau');
+        res.armor = 'Veste en cuir synthétique';
 
         if (rating > 4 || roll.dval(3) === 3) {
           res.skills['Armes à feu'] = 1 + rating;
@@ -123,7 +125,7 @@ var db = {
         res.skills['Armes à feu'] = 3 + rating;
         res.skills['Combat rapproché'] = 2 + rating;
         res.qualities.positive.push('Dur à cuire');
-        res.armor = 'Gilet pare-balles';
+        res.armor = 'Manteau renforcé';
         res.weapons.push('Couteau');
 
         switch (roll.dval(4)) {
@@ -177,21 +179,21 @@ var db = {
 
         if (rating < 2) {
           res.weapons.push('Fichetti Security 600');
-          res.weapons.push('Baton étourdissant');
+          res.weapons.push('Electromatraque');
           res.armor = 'Gilet pare-balles';
         }
         else if (rating < 5) {
           res.weapons.push('Colt Cobra TZ-120');
           res.weapons.push('Fichetti Security 600');
-          res.weapons.push('Baton étourdissant');
+          res.weapons.push('Electromatraque');
           res.armor = 'Veste pare-balles';
         }
         else {
           res.skills.Athlétisme = 1 + rating;
           res.weapons.push('FN P93 Praetor');
           res.weapons.push('Ares Predator VI');
-          res.weapons.push('Baton étourdissant');
-          res.armor = 'Armure complète';
+          res.weapons.push('Electromatraque');
+          res.armor = 'Armure corporelle intégrale';
           res.gear.push({
             name: 'Grenade au gaz (CS/Lacrymo)',
             quantity: 2
@@ -210,7 +212,7 @@ var db = {
         res.skills['Combat rapproché'] = 1 + rating;
         res.armor = 'Manteau renforcé';
         res.weapons.push('Defiance EX Shocker');
-        res.weapons.push('Baton étourdissant');
+        res.weapons.push('Electromatraque');
         res.gear.push({
           name: 'Lunettes',
           rating: 2,
@@ -218,15 +220,21 @@ var db = {
         });
         res.gear.push({
           name: 'Jazz',
-          quantity: 2
+          quantity: 2,
+          gear_description: '+1 REA, +2D6 initiative'
         });
         res.commlink = 3;
 
         if (rating < 2) {
+          res.armor = 'Gilet pare-balles';
+        }
+        else if (rating < 5) {
+          res.weapons.push('Ares Predator VI');
           res.armor = 'Veste pare-balles';
         }
         else {
           res.weapons.push('Ares Predator VI');
+          res.armor = 'Armure corporelle intégrale';
         }
         break;
 
@@ -245,12 +253,14 @@ var db = {
 
         if (rating > 4) {
           res.weapons.push('AK-97');
+          res.armor = 'Veste pare-balles';
         }
         else if (roll.dval(3) !== 3) {
           if (roll.dval(2) === 2)
             res.weapons.push('Ceska Black Scorpion');
           else
             res.weapons.push('Steyr TMP');
+            res.armor = 'Veste pare-balles';
         }
         else if (roll.dval(2) === 2) {
           res.weapons.push('Colt Cobra TZ-120');
@@ -269,6 +279,7 @@ var db = {
 
         if (rating > 4) {
           res.weapons.push('AK-97');
+          res.armor = 'Veste pare-balles';
         }
         break;
 
@@ -423,7 +434,7 @@ var db = {
         res.skills.Athlétisme = 1 + rating;
         res.skills.Perception = 1 + rating;
         res.skills.Influence = 2 + rating;
-        res.weapons.push('Armes contondantes');
+        res.weapons.push('Massue');
         res.weapons.push('Couteau');
 
         if (roll.dval(3) === 3) {
@@ -565,11 +576,13 @@ var db = {
           res.augmentations.push({ name: 'Lames d\'avant-bras' });
           res.gear.push({
             name: 'Jazz',
-            quantity: 2
+            quantity: 2,
+            gear_description: '+1 REA, +2D6 initiative'
           });
           res.gear.push({
             name: 'Novacoke',
-            quantity: 2
+            quantity: 2,
+            gear_description: '+1 REA, +1 CHA, +1 Perception, Endurance à la douleur'
           });
           break;
 
@@ -669,7 +682,7 @@ var db = {
           break;
 
         case 6:
-          weapon_name = 'Matraque';
+          weapon_name = 'Massue';
           break;
 
         case 7:
@@ -878,7 +891,8 @@ var db = {
       // Gear
       res.gear.push({
         name: 'Psyche',
-        quantity: 2
+        quantity: 2,
+        gear_description: '+1 INT, +1 LOG'
       });
       res.gear.push({
         name: 'Réactifs',
@@ -1254,7 +1268,7 @@ var db = {
         res.gear.push({
           name: 'Psyche',
           quantity: 2,
-          gear_description: '-2 REA, +1 VOL, -1D pour les actions basées sur les attributs physiques.'
+          gear_description: '+1 INT, +1 LOG'
         });
       }
 
@@ -1348,7 +1362,7 @@ var db = {
 
       // Armor
       if (rating < 4)
-        res.armor = 'Veste pare-balles';
+        res.armor = 'Gilet pare-balles';
       else
         res.armor = 'Manteau renforcé';
 
@@ -1591,7 +1605,7 @@ var db = {
             augment = this.get_augmentation('Amplificateur synaptique');
             augment.rating = roll.half(rating - 1);
             res.augmentations.push(augment);
-            res.weapons.push(this.get_weapon('Couteau de combat'));
+            res.weapons.push(this.get_weapon('Couteau de survie'));
           }
 
           augment = this.get_augmentation('Orthoderme');
@@ -1728,9 +1742,9 @@ var db = {
 
       // Weapon
       if (rating < 2)
-        res.weapons.push(this.get_weapon('Armes contondantes'));
+        res.weapons.push(this.get_weapon('Massue'));
       else
-        res.weapons.push(this.get_weapon('Baton étourdissant'));
+        res.weapons.push(this.get_weapon('Electromatraque'));
 
       if (rating < 3) {
         res.weapons.push(this.get_weapon('Defiance T-250'));
@@ -1814,11 +1828,13 @@ var db = {
       // Gear
       res.gear.push({
         name: 'Psyche',
-        quantity: 2
+        quantity: 2,
+        gear_description: '+1 INT, +1 LOG'
       });
       res.gear.push({
         name: 'Novacoke',
-        quantity: 2
+        quantity: 2,
+        gear_description: '+1 REA, +1 CHA, +1 Perception, Endurance à la douleur'
       });
       res.gear.push({
         name: 'Focus d\'invocation',
@@ -2233,8 +2249,9 @@ var db = {
       'Veste en cuir synthétique': 1,
       'Costume Actioneer': 2,
       'Vêtements pare-balles': 2,
-      'Manteau renforcé': 4,
-      'Veste pare-balles': 3,
+      'Manteau renforcé': 3,
+      'Gilet pare-balles': 3,
+      'Veste pare-balles': 4,
       'Combinaison caméléon': 2,
       'Armure corporelle intégrale': 5,
       'Armure corporelle intégrale avec casque et isolation chimique': 7,
@@ -2454,97 +2471,95 @@ var db = {
       name: 'Hache de combat',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '9/-/-/-/-',
-      dv: 5,
-      damage_attribute: 'strength',
-      ap: -4
+      ar: '/-/-/-/-',
+      ar_strength: 9,
+      dv: 5
     },
 
     {
-      name: 'Couteau de combat',
+      name: 'Couteau de survie',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '8/2*/-/-/-',
-      dv: 3,
-      damage_attribute: 'strength',
-      ap: -3
+      ar: '/2/-/-/-',
+      ar_strength: 6,
+      dv: 3
     },
 
     {
       name: 'Couteau',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '6/1*/-/-/-',
+      ar: '/1/-/-/-',
       dv: 2,
-      damage_attribute: 'strength',
-      ap: -1
+      ar_strength: 6
     },
 
     {
       name: 'Katana',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '10/-/-/-/-',
+      ar: '/-/-/-/-',
       dv: 4,
-      damage_attribute: 'strength',
-      ap: -3,
+      ar_strength: 10
     },
 
     {
       name: 'Epée',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '9/-/-/-/-',
+      ar: '/-/-/-/-',
       dv: 3,
-      damage_attribute: 'strength',
-      ap: -2,
+      ar_strength: 9
     },
 
     {
       name: 'Lames d\'avant-bras',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '7/-/-/-/-',
+      ar: '/-/-/-/-',
       dv: 3,
-      damage_attribute: 'strength',
-      ap: -2
+      ar_strength: 6
     },
 
     {
-      name: 'Armes contondantes',
+      name: 'Massue',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '6/-/-/-/-',
+      ar: '/-/-/-/-',
       dv: 3,
-      damage_attribute: 'strength',
+      ar_strength: 6,
+      damage_type: 'E'
     },
 
     {
-      name: 'Baton étourdissant',
+      name: 'Electromatraque',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '6/-/-/-/-',
+      ar: '/-/-/-/-',
       dv: 5,
-      damage_type: 'E(e)',
-      ap: -5,
+      ar_strength: 6,
+      damage_type: 'E(e)'
     },
 
     {
-      name: 'Matraque',
+      name: 'Bâton',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '8/-/-/-/-',
+      ar: '/-/-/-/-',
       dv: 4,
       damage_attribute: 'strength',
+      ar_strength: 8,
+      damage_type: 'E'
     },
 
     {
       name: 'Matraque téléscopique',
       type: 'Melee',
       ability: 'Combat rapproché',
-      ar: '8/-/-/-/-',
-      dv: 4,
-      damage_attribute: 'strength',
+      ar: '/-/-/-/-',
+      dv: 2,
+      ar_strength: 5,
+      damage_type: 'E'
     },
 
     {
@@ -2600,7 +2615,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '10/10/8/-/-',
       dv: 3,
-      ap: -1,
       modes: 'SA/TR',
       ammo_count: 15,
       reload: 'c'
@@ -2612,7 +2626,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '10/9/6/-/-',
       dv: 3,
-      ap: -1,
       modes: 'SA',
       ammo_count: 10,
       reload: 'c'
@@ -2624,7 +2637,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '9/8/4/-/-',
       dv: 5,
-      ap: -1,
       modes: 'SA',
       ammo_count: 8,
       reload: 'm'
@@ -2697,7 +2709,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '4/11/9/7/1',
       dv: 5,
-      ap: -2,
       modes: 'SA/TR/TA',
       ammo_count: 38,
       reload: 'c'
@@ -2709,7 +2720,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '4/10/9/7/2',
       dv: 4,
-      ap: -2,
       modes: 'SA/TR/TA',
       rc: 2,
       ammo_count: 42,
@@ -2722,7 +2732,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '3/11/10/6/1',
       dv: 5,
-      ap: -2,
       modes: 'SA/TR/TA',
       rc: 2,
       ammo_count: 35,
@@ -2735,7 +2744,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '3/8/11/8/8',
       dv: 5,
-      ap: -3,
       modes: 'SA/TR',
       rc_modified: 1,
       ammo_count: 20,
@@ -2748,7 +2756,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '7/10/6/-/-',
       dv: 4,
-      ap: -1,
       modes: 'SS/SA',
       ammo_count: 5,
       reload: 'm'
@@ -2760,7 +2767,6 @@ var db = {
       ability: 'Armes à feu',
       ar: '4/11/7/-/-',
       dv: 4,
-      ap: -1,
       modes: 'SA/TR',
       ammo_count: 10,
       reload: 'c'
@@ -2772,7 +2778,6 @@ var db = {
       ability: 'Armes exotiques',
       ar: '2/11/12/7/3',
       dv: 4,
-      ap: -2,
       modes: 'SA/TR/TA',
       ammo_count: 50,
       reload: 'c'
@@ -2784,7 +2789,6 @@ var db = {
       ability: 'Armes exotiques',
       ar: '1/9/12/8/6',
       dv: 7,
-      ap: -6,
       modes: 'SA',
       ammo_count: 15,
       reload: 'c'
@@ -2847,19 +2851,22 @@ var db = {
     {
       name: 'Jazz',
       quantity: 2,
-      gear_description: '+1 CON, +1 AGI, +2 FOR, +1 VOL, +2D6 initiative, Endurance à la douleur (10*1D6mn)'
+      gear_description: '+1 REA, +2D6 initiative'
     },
     {
       name: 'Kamikaze',
-      quantity: 2
+      quantity: 2,
+      gear_description: '+1 CON, +1 AGI, +2 FOR, +1 VOL, +2D6 initiative, Endurance à la douleur (10*1D6mn)'
     },
     {
       name: 'Novacoke',
-      quantity: 2
+      quantity: 2,
+      gear_description: '+1 REA, +1 CHA, +1 Perception, Endurance à la douleur'
     },
     {
       name: 'Psyche',
-      quantity: 2
+      quantity: 2,
+      gear_description: '+1 INT, +1 LOG'
     },
     {
       name: 'Réactifs',

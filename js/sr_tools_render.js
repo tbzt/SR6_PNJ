@@ -1145,12 +1145,14 @@ var render = {
       if (entry.hasOwnProperty('force'))
         entry_text.push('Puissance ' + entry.force);
 
-      if (entry.damage_attribute === 'strength')
-        entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
-      else
-        entry_text.push('VD ' + entry.dv + entry.damage_type);
+      entry_text.push('VD ' + entry.dv + entry.damage_type);
 
-      entry_text.push('SO ' + entry.ar);
+      if (entry.hasOwnProperty('ar_strength'))
+        entry_text.push('SO (FOR + ' + entry.ar_strength + entry.ar);
+      else
+        entry_text.push('SO ' + entry.ar);
+
+      
       // if (entry.ap !== 0)
       // 	entry_text.push('AP ' + entry.ap);
 
@@ -1206,14 +1208,12 @@ var render = {
 
       entry_text = [entry.ability];
 
-      if (entry.damage_attribute === 'strength')
-        entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
-      else
-        entry_text.push('VD ' + entry.dv + entry.damage_type);
+      entry_text.push('VD ' + entry.dv + entry.damage_type);
 
-      // if (entry.ap !== 0)
-      // 	entry_text.push('AP ' + entry.ap);
-      entry_text.push('SO ' + entry.ar);
+      if (entry.hasOwnProperty('ar_strength'))
+        entry_text.push('SO (FOR + ' + entry.ar_strength + entry.ar);
+      else
+        entry_text.push('SO ' + entry.ar);
 
       $gear = render.get_template('display_weapon').appendTo($mook.find('.information .gear .value'));
 
@@ -1243,9 +1243,9 @@ var render = {
         }
 
         if (i.glitch)
-          total += ',g';
+          total += ',c';
         else if (i.crit_glitch)
-          total += ',G';
+          total += ',EC';
 
         $gear.find('.result').html(total);
       });
@@ -1261,17 +1261,17 @@ var render = {
       // else
       // 	entry_text.push('Acc ' + entry.acc);
 
-      if (entry.damage_attribute === 'strength')
-        entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
-      else
-        entry_text.push('VD ' + entry.dv + entry.damage_type);
+         entry_text.push('VD ' + entry.dv + entry.damage_type);
 
       // if (entry.ap !== 0)
       // 	entry_text.push('AP ' + entry.ap);
 
       entry_text.push(entry.modes);
 
-      entry_text.push('SO ' + entry.ar);
+      if (entry.hasOwnProperty('ar_strength'))
+        entry_text.push('SO (FOR + ' + entry.ar_strength + entry.ar);
+      else
+        entry_text.push('SO ' + entry.ar);
 
       // if (entry.rc < entry.rc_modified)
       // 	entry_text.push('RC ' + entry.rc + ' (' + entry.rc_modified + ')');
@@ -1799,12 +1799,12 @@ var render = {
       // else
       // 	entry_text.push('Acc ' + entry.acc);
 
-      if (entry.damage_attribute === 'strength')
-        entry_text.push('VD (FOR + ' + entry.dv + ')' + entry.damage_type);
-      else
-        entry_text.push('VD ' + entry.dv + entry.damage_type);
+      entry_text.push('VD ' + entry.dv + entry.damage_type);
 
-      entry_text.push('SO ' + entry.ar);
+      if (entry.hasOwnProperty('ar_strength'))
+        entry_text.push('SO (FOR + ' + entry.ar_strength + entry.ar);
+      else
+        entry_text.push('SO ' + entry.ar);
 
       // if (entry.ap !== 0)
       // 	entry_text.push('AP ' + entry.ap);
@@ -1828,7 +1828,10 @@ var render = {
       // else
       entry_text.push('VD ' + entry.dv + entry.damage_type);
 
-      entry_text.push('SO ' + entry.ar);
+      if (entry.hasOwnProperty('ar_strength'))
+        entry_text.push('SO (FOR + ' + entry.ar_strength + entry.ar);
+      else
+        entry_text.push('SO ' + entry.ar);
 
       // if (entry.ap !== 0)
       // 	entry_text.push('AP ' + entry.ap);
@@ -1856,7 +1859,10 @@ var render = {
 
       entry_text.push(entry.modes);
 
-      entry_text.push('SO ' + entry.ar);
+      if (entry.hasOwnProperty('ar_strength'))
+        entry_text.push('SO (FOR + ' + entry.ar_strength + entry.ar);
+      else
+        entry_text.push('SO ' + entry.ar);
 
       // if (entry.rc < entry.rc_modified)
       // 	entry_text.push('RC ' + entry.rc + ' (' + entry.rc_modified + ')');
@@ -2063,7 +2069,7 @@ var render = {
 
       // Handle attribute changes
       switch (name) {
-        case 'Muscle Augmentation':
+        case 'Renforcement musculaire':
           attr.strength += aug.rating;
           break;
 
