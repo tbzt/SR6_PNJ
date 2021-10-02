@@ -745,7 +745,7 @@ var render = {
     }
 
     // Major and Minor actions
-    var major = 1, minor = initiative.dice_augmented;
+    var major = 1, minor = initiative.dice_augmented, minor_dice = initiative.dice_augmented;
 
     data.augmentations.forEach(function (aug) {
       if (aug.name === 'Réflexes câblés' || aug.name === 'Amplificateur synaptique') {
@@ -753,7 +753,7 @@ var render = {
       }
     });
 
-    init_display += ' [' + major + 'M & ' + minor + 'm]';
+    init_display += ' [' + major + 'M & ' + minor_dice + 'm]';
 
     $mook.find('.information .initiative .value').html(init_display);
 
@@ -769,7 +769,7 @@ var render = {
 
     if (data.special.is_decker === true) {
       var matrix_initiative = this.calc_initiative(data, augmented_attributes, 'matrix');
-      $mook.find('.information .matrix_initiative .value').html('Traitement de données + ' + matrix_initiative.base + ' + ' + matrix_initiative.dice + 'D6 [1M& ' + initiative.dice + 'm]');
+      $mook.find('.information .matrix_initiative .value').html('Traitement de données + ' + matrix_initiative.base + ' + ' + matrix_initiative.dice + 'D6 [1M & ' + matrix_initiative.dice + 'm]');
 
       $mook.find('.information .matrix_initiative button').button().click(function () {
         var i, total = matrix_initiative.base;
@@ -789,7 +789,7 @@ var render = {
 
     if (data.special.is_mage === true || data.special.is_shaman === true) {
       var astral_initiative = this.calc_initiative(data, augmented_attributes, 'astral');
-      $mook.find('.information .astral_initiative .value').html(astral_initiative.base + ' + ' + astral_initiative.dice + 'D6 [1M & ' + initiative.dice + 'm]');
+      $mook.find('.information .astral_initiative .value').html(astral_initiative.base + ' + ' + astral_initiative.dice + 'D6 [1M & ' + astral_initiative.dice + 'm]');
 
       $mook.find('.information .astral_initiative button').button().click(function () {
         var i, total = astral_initiative.base;
@@ -861,7 +861,15 @@ var render = {
 
       var i = roll.d(d), total = i.hits;
 
-        $mook.find('.information .drain_resistance .result').html(total + wp.penalty);
+        if (i.glitch)
+          total += ', complication';
+        else if (i.crit_glitch)
+          total += ', ECHEC CRITIQUE';
+
+        total += ' (' + d + 'D)';
+
+
+        $mook.find('.information .drain_resistance .result').html(total);
       });
     }
   }
@@ -945,7 +953,7 @@ var render = {
 
         if (wp.penalty !== 0) {
           if ((d + wp.penalty) <= 0) {
-            $skill.find('.result').html('No pool w/ wounds');
+            $skill.find('.result').html('Pas de dés, voir malus !');
             return;
           }
 
@@ -953,10 +961,14 @@ var render = {
           total = i.hits;
         }
 
+        nd = d + wp.penalty;
+
         if (i.glitch)
           total += ', complication';
         else if (i.crit_glitch)
           total += ', ECHEC CRITIQUE';
+
+        total += ' (' + nd + 'D)';
 
         $skill.find('.result').html(total);
       });
@@ -1242,10 +1254,14 @@ var render = {
           total = i.hits;
         }
 
+        nd = d + wp.penalty;
+
         if (i.glitch)
-          total += ',c';
+          total += ', complication';
         else if (i.crit_glitch)
-          total += ',EC';
+          total += ', ECHEC CRITIQUE';
+
+        total += ' (' + nd + 'D)';
 
         $gear.find('.result').html(total);
       });
@@ -1311,10 +1327,14 @@ var render = {
           total = i.hits;
         }
 
+        nd = d + wp.penalty;
+
         if (i.glitch)
-          total += ',complication';
+          total += ', complication';
         else if (i.crit_glitch)
-          total += ',Echec critique';
+          total += ', ECHEC CRITIQUE';
+
+        total += ' (' + nd + 'D)';
 
         $gear.find('.result').html(total);
       });
@@ -1570,7 +1590,7 @@ var render = {
     }
 
     // Major and Minor actions
-    var major = 1, minor = initiative.dice_augmented;
+    var major = 1, minor = initiative.dice_augmented, minor_dice = initiative.dice_augmented;
 
     data.augmentations.forEach(function (aug) {
       if (aug.name === 'Réflexes câblés' || aug.name === 'Amplificateur synaptique') {
@@ -1578,7 +1598,7 @@ var render = {
       }
     });
 
-    init_display += ' [' + major + 'M & ' + minor + 'm]';
+    init_display += ' [' + major + 'M & ' + minor_dice + 'm]';
 
     $mook.find('.information .initiative .value').html(init_display);
 

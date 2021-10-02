@@ -161,6 +161,25 @@ var db = {
         if (rating > 3) {
           res.armor = 'Veste pare-balles';
         }
+
+        if (rating > 3 && roll.dval(3) === 3) {
+          res.augmentations.push({
+            name: 'Cyberbras (droit)',
+            rating: Math.ceil(rating / 3)
+          });
+        }
+
+        if (rating > 3 && roll.dval(3) === 1) {
+          res.augmentations.push({
+            name: 'Cyberbras (gauche)',
+          });
+            res.augmentations.push({
+            name: 'Orthoderme',
+            rating: Math.ceil(rating / 3)
+          });
+        }
+
+
         break;
 
       case 'corpsec':
@@ -277,10 +296,23 @@ var db = {
           });
         }
 
-        if (rating > 4) {
-          res.weapons.push('AK-97');
-          res.armor = 'Veste pare-balles';
+        if (rating > 3 && roll.dval(3) === 3) {
+          res.augmentations.push({
+            name: 'Renforcement musculaire',
+            rating: Math.ceil(rating / 3)
+          });
         }
+
+        if (rating > 3 && roll.dval(3) === 1) {
+          res.augmentations.push({
+            name: 'Tonification musculaire',
+            rating: Math.ceil(rating / 3)
+          });
+        }
+
+
+
+
         break;
 
       case 'htr':
