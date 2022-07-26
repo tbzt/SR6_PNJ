@@ -104,7 +104,7 @@ function view_cast(show_intro) {
       var $deletion_dialog = $char_template.find('.delete_dialog').dialog({
         autoOpen: false,
         modal: true,
-        title: 'Remove Cast Member',
+        title: 'Supprimer',
         width: 450,
         buttons: [
           {
@@ -116,7 +116,7 @@ function view_cast(show_intro) {
             }
           },
           {
-            text: "Cancel",
+            text: "Annuler",
             click: function () {
               $(this).dialog("close");
             }
@@ -132,7 +132,7 @@ function view_cast(show_intro) {
       var $clone_dialog = $char_template.find('.clone_dialog').dialog({
         autoOpen: false,
         modal: true,
-        title: 'Clone Cast Member',
+        title: 'Cloner',
         width: 450,
         buttons: [
           {
@@ -144,12 +144,16 @@ function view_cast(show_intro) {
             }
           },
           {
-            text: "Cancel",
+            text: "Annuler",
             click: function () {
               $(this).dialog("close");
             }
           }
         ]
+      });
+
+      $char_template.find('.export_cast_member').button().click(function () {
+        $export_dialog.dialog('open');
       });
 
       $char_template.find('.clone_cast_member').button().click(function () {
@@ -241,7 +245,7 @@ function view_cast(show_intro) {
         var $deletion_dialog = $char_template.find('.tab_delete_dialog').dialog({
           autoOpen: false,
           modal: true,
-          title: 'Remove Cast Member',
+          title: 'Supprimer',
           width: 450,
           buttons: [
             {
@@ -253,7 +257,7 @@ function view_cast(show_intro) {
               }
             },
             {
-              text: "Cancel",
+              text: "Annuler",
               click: function () {
                 $(this).dialog("close");
               }
@@ -269,7 +273,7 @@ function view_cast(show_intro) {
         var $clone_dialog = $char_template.find('.tab_clone_dialog').dialog({
           autoOpen: false,
           modal: true,
-          title: 'Clone Cast Member',
+          title: 'Cloner',
           width: 450,
           buttons: [
             {
@@ -281,7 +285,7 @@ function view_cast(show_intro) {
               }
             },
             {
-              text: "Cancel",
+              text: "Annuler",
               click: function () {
                 $(this).dialog("close");
               }
@@ -293,6 +297,43 @@ function view_cast(show_intro) {
           $clone_dialog.dialog('open');
         });
 
+        $char_template.find('.export_dialog').detach();
+        var $export_dialog = $char_template.find('.tab_export_dialog').dialog({
+          autoOpen: false,
+          modal: true,
+          title: 'Cloner',
+          width: 450,
+          buttons: [
+            {
+              text: "Ok",
+              click: function () {
+                let character = storage.get_character(character_id);
+                let dataStr = JSON.stringify(character);
+                let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+                let exportFileDefaultName = 'data.json';
+            
+                let linkElement = document.createElement('a');
+                linkElement.setAttribute('href', dataUri);
+                linkElement.setAttribute('download', exportFileDefaultName);
+                linkElement.click();
+                $(this).dialog("close");
+                view_cast();
+              }
+            },
+            {
+              text: "Annuler",
+              click: function () {
+                $(this).dialog("close");
+              }
+            }
+          ]
+        });
+
+        $char_template.find('.export_cast_member').button().click(function () {
+          $export_dialog.dialog('open');
+        });
+          
         $char_template.find('.created_date').html('Créé : ' + render.format_string_date(character.created));
 
         if (character.edited)
@@ -490,7 +531,7 @@ function view_generator() {
       width: 500,
       buttons: [
         {
-          text: "Cancel",
+          text: "Annuler",
           click: function () {
             $(this).dialog("close");
           }
