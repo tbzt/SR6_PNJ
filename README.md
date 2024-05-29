@@ -9,7 +9,7 @@ Il est divisé en plusieurs sections, toutes accessibles par les onglets à gauc
 - Paramètres propose une sélection de, vous l'avez deviné, paramètres que vous pouvez modifier. Il y a également un bouton Atomiser si vous voulez supprimer toutes les informations enregistrées et recommencer à zéro.  
 
 Ce code a également servi d'exutoire créatif à Toktic pour la programmation pour son propre plaisir. Mais si vous le trouvez par hasard à une convention et que vous voulez le remercier, vous pouvez lui payer une bière à la GenCon.
-Ce code a été traduit en français par Michel_Platinium qui l'héberge sur son propre serveur. Pareil pour la bière, moins la GenCon.
+Ce code a été traduit en français par Michel_Platinium qui l'héberge sur son propre repo GitHub. Pareil pour la bière, moins la GenCon.
 Sur la conservation des données :le site utilise une fonctionnalité web, appelée Local Storage, qui agit un peu comme des cookies. Les données sont stockées dans le cache de votre navigateur. Les données ne sont pas partagées avec d'autres utilisateurs de votre ordinateur, ni même avec d'autres navigateurs, ni au créateur et ni à Michel_Platinium. Donc, si vous prenez le temps de créer et de sauvegarder des PNJs, assurez-vous de le créer sur l'ordinateur que vous apportez à la session de jeu. Ou imprimez-les, ça marche aussi !</p> 
 
 Amusez-vous bien avec cet outil ! Il est destiné à être utilisé et destiné à rendre votre vie plus facile en tant que MJ. 
